@@ -6,14 +6,14 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{isotope}
-\usepackage{units}
 \usepackage{float}
 \usepackage{scrpage2}
+\usepackage{vanadin}
   
 
-\title{TP Cesire \isotope[13]{C} en RMN}
-\author{Mona Dentler, Sabine Engelhardt et Laura Hilpert}
-%mitautor Michel Bardet, Sabine Herdiger
+\title{Résonance magnétique nucléaire (RMN) du \isotope[13]{C} haute résolution en phase solide}
+\subtitle{TP Cesire}
+\author{Mona Dentler,\\ Sabine Engelhardt et Laura Hilpert}
 \publishers{Université Joseph Fourier, CEA Grenoble}
 
  \begin{document}
@@ -26,13 +26,12 @@
   \vspace{2cm}
 
   \Huge
-  TP Cesire \isotope[13]{C} en RMN\newline
+  Résonance magnétique nucléaire (RMN) du \isotope[13]{C} haute résolution en phase solide\newline
+  \Large TP Cesire
   \vspace{1cm}
-  \Large
-
 
   \@author
-  \newline
+  \newline\empty\\
   \@publishers
 
 
@@ -42,27 +41,48 @@
  \vfill
 
  \begin{abstract}
-  Le but de ce TP Cesire est de comprendre comment faire un RMN des solides. On sait déjà très bien faire un RMN de solution, mais pour un solide il y a quelques problèmes. Un solide est inhomogène et il y a la force dipôlaire qui dérange la mesure car les atomes sont fortement couplés. En solution cette force se moyenne à zéro.\\ 
-  Comment alors obtenir un bon image d'un solide? D'abord nous avons appris un peu de la théorie d'un RMN et sutout les solutions pour faire un RMN d'un solide pour ensuite les vérifier en mesurant. 
+  Le but de ce TP Cesire est de comprendre comment faire spectre des solides à l'aide d'une RMN. On le sait déjà très bien faire pour une solution, mais pour un solide il y a quelques problèmes. Un solide est inhomogène et il y a la force dipôlaire qui dérange la mesure, car les atomes sont fortement couplés. En solution cette force se moyenne à zéro.\\ 
+  Comment alors obtenir un bon spectre d'un solide? D'abord nous avons appris un peu de la théorie d'une RMN et surtout les solutions pour faire une RMN d'un solide pour ensuite les vérifier en mesurant. 
  \end{abstract}
  \newpage
 \pagestyle{scrheadings}
  \tableofcontents
 
- \section{RMN}
+ \section{Résonance Magnétique Nucléaire (RMN)}
+  \subsection{Fonctionnement d'une RMN}
+  La RMN use la résonance de spin des noyeaux atomiques. L'échantillon est mis dans un champ magnétique $B_0$ externe pour avoir les moments magnétiques des atomes paralell ou anti-paralell au $B_0$. Par conséquence le moment magnétique d'un atome tourne autour cette direction avec la fréquence de Larmor $\omega_L=\frac{\gamma}{2\pi}B_0$ avec $\gamma$ le rapport gyromagnétique. $\omega_L$ est specifique pour chaque materiél, à cause du moment angulaire de l'atome. Le champ magnétique est donc augmenté dans cette direction, mais cette augmentataion est à peine mesurable, alors on use une autre méthode.\\
+  Une onde électro-magnétique (em) avec la fréquence $\omega_L$ en grandeur des ondes radio est envoyé à l'échantillon. Les moments magnétiques commencent à basculer car l'onde em leurs donne l'énergie qui est necessaire. Normalement on arrêt l'onde quand les spins sont à \unit[90]{\degree} par rapport au $B_o$. Dans cette direction on peut mesurer le champ magnétique $M$ causé par les moments magnétique qui est perpendiculaire au $B_0$.\\
+  Si on arrête l'onde em les moments magnétique se remettent en position originale. Cette relaxation est dû à l'interaction spin-spin et à l'interaction de spin-atome. Le temps de relaxation est différent pour chaque matériel et en mesurant le changement de $M$ on peut y déduire le temps de relaxation.   \newline
+  L'atome le plus simple de détecter est l'Hydrogène H. Cet atome a un moment magnétique très fort et donc il est facile à tourné par l'onde em.
+
   \subsection{RMN d'une solution}
+   Avec cette dispositif on peut faire un spectre très précise d'une solution. Une solution est isotrope donc il n'y a pas des interactions qui dérange la mesure. On obtient des spectre avec des pics trés précis et grand.
 
   \subsection{Problématique d'un RMN d'un solide}
-   
-  \subsection{Solutions}
-   \subsubsection{Découplage}
+   Si on essaie de faire un spectre avec ce dispositif, on ne voit presque rien. La couplage dipolaire entre les atomes provoque une relaxation assez vite et on ne peut plus distingué entre les différent atomes. En plus un solide est anisotrope donc à chaque l'angle on trouve un autre ordre des atomes. 
 
-   \subsubsection{Übertragung Magnetisierung}
+  \subsection{Solutions}
+   Car nous avons fait des RMN du \isotope[13]{C}, nous présontons les solution pour cet isotope. Il y a trois aspects différents:
+   \begin{enumerate}
+    \item La découplage dipolaire pour élimiter les interactions dipolaires.
+    \item La rotation à l'angle magique pour éviter l'anisotropie.
+    \item La polarisatopn croisée pour augmenter la sensibilité du \isotope[13]{C}.
+   \end{enumerate}
+
+   \subsubsection{Découplage dipolaire}
+    Le champ effectif pour le spin d'un atome est
+    \begin{equation*}
+     B_{eff}=B_0 + B_{couplage} 
+    \end{equation*}
+    avec $B_{couplage}$ le champ local autour d'atome causé par les interactions dipolaire et scalaires entre les atomes.
+
+    Pendant la temps de mesure on peut découpler les atomes H des atomes C en envoyant une onde em pour fixer le moment magnétique de H perpendiculaire 
 
    \subsubsection{Rotation de l'angle magique}
 
-   \subsubsection{Puissance de Hartmann-Hahn}
- 
+   \subsubsection{Polarisation croisée}
+    
+   
  
 
  \section{Dispositif expérimental}

@@ -1,0 +1,586 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vanadin}[2010/10/05 v0.3 Vanadin -- a universal camouflage for FAUish LaTeX]
+% Johannes Hielscher, Simon Weis, LPPL 2010
+% \svnInfo $Id: vanadin.sty 1627 2011-06-27 11:49:21Z laguna $
+
+% Optional Arguments:
+%   noindent            : Do not indent a paragraph's first line, space paragraphs instead
+%   tpl                 : Use good old fancyhdr styled page borders -- \subtitle appears on top of each page
+%   [no-]inline-heading : [Don't] make use of a more compact in-line heading format -- default
+%   unspace             : Cut page borders for better area efficiency
+%   colorless           : Redefine all colors as b/w.
+%   skalart             : Define \skalar as {}^T rather than \cdot
+%   noauthor            : Explicitely exclude given author
+%   nodate              : Disable Date
+%   beamer              : Use nice pre-formatted design for beamer slides
+%   gnuplot             : Be able to process in-line gnuplot scripts to produce nice graphs within your document.
+
+
+%%%%%%% Switches %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% They predefine vanadin's default behaviour, then the options process to manipulate their values, and eventually the commands are executed as switched (see below)
+
+\newif\if@everything \@everythingtrue %We need that to distinguish must-be-portable functionality from (corporate) design issues
+\newif\if@backdefinecal \@backdefinecaltrue %Back-define \mathcal and \textsl? (mainly to fix fourier deficiencies)
+\newif\if@tpl \@tplfalse % if we use fancyhdr tpl -- default off
+\newif\if@scrtpl \@scrtpltrue % if we use scrpage2 for tpl'ing
+\newif\if@inlineheading \@inlineheadingtrue % if we use inline-heading
+\newif\if@mentionauthor \@mentionauthortrue % if the author gets mentioned within the titling
+\newif\if@mentiondate \@mentiondatetrue % if the date gets mentioned within the titling
+\newif\if@colored \@coloredtrue % if we use non-colourless colours
+\newif\if@skalart \@skalartfalse % which scalar product multiplicator symbol we use
+\newif\if@unspaced \@unspacedfalse % if we (ab)use the page area more efficient
+\newif\if@quer \@querfalse % if we use a 3-column landscape layout (implies tpl)
+\newif\if@hyperref \@hyperreftrue % to reference hyperref.sty
+\newif\if@vsvn \@vsvnfalse % to reference svninfo.sty
+\newif\if@vargreek \@vargreekfalse % Exchange \[greek] with \var[greek]
+\newif\if@titlepage \@titlepagefalse % for a sophisticated title page design
+\newif\if@beamer \@beamerfalse % beamer.cls vanadin style sheet
+\newif\if@gnuplotv \@gnuplotvfalse % OS aware gnuplot
+\newif\if@gnuplotdead \@gnuplotdeadfalse % dirty workaround for broken gnuplottex package
+
+\newif\if@venturisda \@venturisdafalse % TODO Could this work more elegant?
+
+
+
+%%%%%%% Options %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Determine if we include Vanadin's full functionality or only design-independent essentials
+\DeclareOption{essentials}{ \@everythingfalse \@backdefinecalfalse \@inlineheadingfalse }
+
+% Back-define AMS \mathcal -- When you use this option, make sure no other font package redefines \mathcal afterwards!
+\DeclareOption{backdefinecal}{ \@backdefinecaltrue }
+
+% Cut page borders for better area efficiency
+\DeclareOption{unspace}{ \@unspacedtrue } 
+
+% Add the author to the heading
+\DeclareOption{author}{ \PackageWarningNoLine{vanadin}{Usage of the option `author' is obsolete.^^J Any author will be mentioned if you define them via \noexpand\author}}
+\DeclareOption{noauthor}{ \@mentionauthorfalse }
+
+\DeclareOption{nodate}{ \@mentiondatefalse }
+
+% Use the hr page decoration template
+\DeclareOption{tpl}{ \@tpltrue \@scrtplfalse }
+\DeclareOption{notpl}{ \@scrtplfalse \@tplfalse \@inlineheadingfalse } % in future, you might need to use notpl in order not to use tpl
+
+\DeclareOption{scrtpl}{ \@scrtpltrue \@tplfalse }
+
+% More compact ``in-line''-looking title than default
+\DeclareOption{inline-heading}{ \@inlineheadingtrue }
+\DeclareOption{no-inline-heading}{ \@inlineheadingfalse }
+
+% Less compact ``title page'' design (ref. PP documents)
+\DeclareOption{titlepage}{ \@inlineheadingfalse \@titlepagetrue }
+
+% Option: No Paragraph Indentation
+\DeclareOption{noindent}{
+  \setlength{\parindent}{0em}
+  %\setlength{\parskip}{0.31em}
+  \setlength{\parskip}{0.43em}
+}
+
+% Option: Make every color black
+\DeclareOption{colorless}{ \@coloredfalse }
+
+% Option: Use a superposed T to symbolise the scalar vector product rather than a cdot
+\DeclareOption{skalart}{ \@skalarttrue }
+
+% Option: if we use a 3-column landscape layout
+\DeclareOption{quer}{ \@quertrue }
+
+% Option: if to reference hyperref.sty -- use nohyperref e.g. in conjunction with beamer.cls
+\DeclareOption{nohyperref}{ \@hyperreffalse }
+
+% Option: SVN?
+\DeclareOption{svn}{ \@vsvntrue }
+
+% Option: Exchange \greek and \vargreek?
+\DeclareOption{var}{ \@vargreektrue }
+
+% Option: Use vanadinised beamer?
+\DeclareOption{beamer}{ \@beamertrue \@hyperreffalse }
+
+% Option: Smart gnuplot inclusion
+\DeclareOption{gnuplot}{ \@gnuplotvtrue }
+
+% Option: dirty workaround for broken gnuplottex package
+\DeclareOption{gnuplotdead}{ \@gnuplotvtrue \@gnuplotdeadtrue }
+
+\ProcessOptions\relax
+
+
+% Check to use beamer template only when beamer is actually in use
+\if@beamer
+\@ifclassloaded{beamer}{
+\@scrtplfalse \@tplfalse \@inlineheadingfalse % [notpl] functionality
+}{\PackageWarningNoLine{vanadin}{I won't theme the beamer class if it is not loaded.} \@beamerfalse}
+\fi
+
+
+
+
+
+%%%%%%% General Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% to the very file to fit Vanadin criteria
+\if@everything
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\else
+\@scrtplfalse
+\fi
+
+\RequirePackage{amsmath} % Math extensions
+\RequirePackage[version=3]{mhchem} % Chemistry extensions
+\RequirePackage{xspace}
+
+\providecommand*{\subtitle}[1]{\gdef\@subtitle{#1}}% to fix pre-3-KOMA issues with non-existing \subtitle % stolen from KOMA3/scrartcl.cls
+\providecommand*{\publishers}[1]{\gdef\@publishers{#1}}% to fix non-KOMA issues with non-existing \publishers (e.g. with article.cls)
+
+
+%%%%%%% Look & Feel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Typesetting goddies
+\RequirePackage[loose]{units} % for nice typesetting of units and fractions via \nicefrac{Z}{N}, \unit[value]{unit} and \unitfrac[value]{uZ}{uN}
+\if@everything % we need that to prevent non-fourier inline math look ugly!
+\let\unrobustunit\unit
+\renewcommand{\unit}[2][]{\ensuremath{\unrobustunit[#1]{#2}}}
+\providecommand{\runit}[2]{\unit[#1]{#2}}
+\fi
+\RequirePackage{gensymb} % to use a more correct \degree unit sign
+\RequirePackage{array} % Advanced control over table and array typesetting, e.g. \setlength{\extrarowheight}{0.4em}
+\RequirePackage{multirow} % Enable row spanning table cells
+\RequirePackage{ushort} % With this package you may write shorter (or longer) underlines/underbars.
+\RequirePackage{relsize} % Advanced font size manipulation
+
+
+
+%   Fonts
+\if@everything
+\RequirePackage{fourier} % Fourier: Nice rm and Math font
+\fi
+\if@backdefinecal
+  \DeclareSymbolFont{calletters}{OMS}{cmsy}{m}{n} % Back-Define AMS \mathcal for calligraphic Math...
+  \DeclareSymbolFontAlphabet{\mathcal}{calletters} %    ...because Fourier's \mathcal looks suspectly
+  \renewcommand{\textsl}[1]{\textit{#1}} % to quick-fix missing slanted fonts in fourier
+\fi
+
+\if@everything % Enable the following only when we are not in [essentials] mode
+\renewcommand{\sfdefault}{lmss} % LM Sans for the headlines
+
+\IfFileExists{venturis.sty}{\PackageWarningNoLine{vanadin}{Using Quick and dirty hack to replace fake Fourier SmallCaps with ways nicer Venturis ones} \@venturisdatrue
+}{\PackageWarningNoLine{vanadin}{Venturis Fonts not installed. I will use Poor Mans Fourier SmallCaps instead}}
+\if@venturisda \renewcommand{\textsc}[1]{{\fontfamily{yvt}\fontshape{sc}\selectfont #1}} \fi
+
+\linespread{1.07} % let the font breathe a bit -- usage of \baselinestretch is discouraged
+%\newcommand{\titlefont}[1]{\textbf{\sffamily#1}} % The headings' font
+%\newcommand{\titlefont}[1]{\textsf{\textbf{#1}}} % The headings' font
+
+%   Layout Tools
+\RequirePackage{geometry} % Manipulate page geometry
+\RequirePackage{multicol} % Advanced multi-column typesetting
+\RequirePackage{graphicx} % Include Images and Graphics
+\RequirePackage{import}   % Use \import{path}{file} for smoother integration of files in other directories
+
+%   Colours
+\if@colored \else \PassOptionsToPackage{gray}{xcolor} \fi
+\RequirePackage{xcolor}
+  \definecolor{linkcolor}{cmyk}{ 1, 0.85, 0, 0.4 }
+  \definecolor{citecolor}{cmyk}{ 0.9, 0.6, 0, 0.3 }
+  \definecolor{highlightcolor}{cmyk}{ 0, 0.85, 1, 0.3 } % Beware of strange coloring errors by the dvi driver!
+  \definecolor{cicolor}{cmyk}{ 1, 0.85, 0, 0.4 } % Colour for design gadgets
+  \definecolor{altcolor}{gray}{ 0.5 } % Colour for annotations etc. (see \anm and \seite)
+  %\definecolor{altcolor}{cmyk}{ 0.14, 0, 0, 0.2 }
+  \definecolor{shadecolor}{gray}{ 0.9 } % to tint highlighting boxes etc.
+  % TODO Rely on \hypersetup in order to enable beamer in conjunction with vanadinised hyperref, resp. prevent option clashes
+
+
+% If no other \publishers is specified, we will use this default
+%\publishers{\url{http://www.laguna.runvs.de/MPHW/}}% Use monospaced font
+\newcommand{\@mphwurl}{{\color{linkcolor} http:/\!/www.laguna.runvs.de/MPHW}} % Use more æsthetic than appropriate font
+\publishers{\@mphwurl} % Use more æsthetic than appropriate font
+
+
+\if@hyperref
+\RequirePackage{hyperref} % Enabling interactive URL's and references
+\hypersetup{colorlinks=true,% Colour link text instead of drawing a box around them
+ breaklinks=true,% Enable line breaking for linkcolors
+ linkcolor=linkcolor,% Colour of in-text links, references, footnotes
+ urlcolor=linkcolor,% Colour of URL's
+ citecolor=citecolor,% Colour of citations
+unicode}
+\renewcommand{\@mphwurl}{\href{http://www.laguna.runvs.de/MPHW/}{http:/\!/www.laguna.runvs.de/MPHW}} % ...and linked
+\fi
+
+
+
+% Manipulations by Options
+ 
+\if@quer
+  \geometry{landscape}
+  \@unspacedtrue
+  \AtBeginDocument{\begin{multicols}{3}}
+  \AtEndDocument{\end{multicols}}
+\fi
+
+\if@unspaced
+  \geometry{left=0.107\paperwidth, outer=0.092\paperwidth, top=0.1\paperheight, inner=0.1\paperheight}
+\fi
+
+
+% Option: Use the hr page decoration template
+\if@scrtpl
+  \RequirePackage{scrpage2}
+  %\RequirePackage[nofoot]{vanadin-krz}
+  \pagestyle{scrheadings}
+  \setkomafont{pageheadfoot}{\normalfont\footnotesize}
+  \cfoot{\@publishers}
+  \setheadsepline{.042em}[\color{cicolor}] % Remark: The cicolored hr on top of the page is remarkably thicker than in the fancyhdr tpl version
+  %\cfoot{\footnotesize{\upshape\@publishers}}
+
+  \newcommand{\cirule}[1][0em]{{\color{cicolor}\rule[-0.3ex]{.267em}{1em}}}
+  \rofoot[\pagemark\hspace{.333em}\cirule\hspace{-.6em}]{\pagemark\hspace{.333em}\cirule\hspace{-.6em}}
+  \lefoot{\hspace{-.6em}\cirule\hspace{.333em}\pagemark}
+  %\ofoot{\pagemark}
+  \lofoot{\color{shadecolor}\footnotesize{\krz\;\makeatletter\@date\makeatother}}
+  %\lofoot{\color{shadecolor}\footnotesize{\if\thepage 1 \krz\;\makeatletter\@date\makeatother\fi}}
+  \ihead{\lower0.6ex\hbox{\cirule}}
+
+  \setheadsepline{.042em}[\color{cicolor}]
+  \setheadwidth[0em]{text}
+  %\setheadwidth[0em]{textwithmarginpar}
+\fi
+
+\if@tpl
+  \RequirePackage{fancyhdr}
+  \pagestyle{fancy}
+  \renewcommand{\headrule}{{\color{cicolor}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+  \fancyhf{}
+  \fancyhead[C]{\@subtitle}
+  \fancyfoot[LE,RO]{\thepage}
+  \fancyfoot[c]{\footnotesize{\@publishers}}
+\fi
+
+
+
+% Populate the following macro within your document to populate the title page
+\newcommand{\maketitlepage}[3]{
+\begin{titlepage}
+\begin{center}
+  \titlefont\@subject
+  \vspace{2cm}
+
+  \@publishers
+
+  #1
+
+  \Huge\@title
+
+  #2
+\end{center}
+
+\vfill
+\begin{multicols}{2}
+  #3
+\end{multicols}
+	
+\end{titlepage}
+%\pagestyle{scrheadings}
+}
+
+
+\if@beamer
+\usetheme{Marburg}
+\usefonttheme{serif}
+\beamertemplatenavigationsymbolsempty
+\providecommand{\titlefont}{\sffamily\bfseries}
+\setbeamerfont{frametitle}{family=\titlefont}
+\setbeamerfont{block title}{family=\titlefont}
+\setbeamerfont{sidebar}{family=\titlefont}
+\fi
+
+
+
+\fi % End of \if@everything
+
+
+
+
+\if@gnuplotv
+%http://tex.stackexchange.com/questions/9792/is-there-a-way-to-detect-from-inside-a-package-that-miktex-is-used
+  \PackageWarningNoLine{gnuplottex}{To be able use the gnuplot environment, your LaTeX command needs to be run with the --shell-escape option. This is a security risk}
+  \RequirePackage{ifplatform}
+  \ifwindows
+    \RequirePackage[miktex]{gnuplottex}
+  \else
+    \RequirePackage{gnuplottex}
+%  \fi % This WORKS! Don't ask me why!
+\fi
+
+\if@gnuplotdead % getting appetite for vandalism. WHY does pdflatex _automatically_ load gnuplottex.sty?
+\PackageWarningNoLine{vanadin}{Using dirty workaround for broken gnuplottex package}
+\def\gnuplotverbatimwrite#1{%
+    \newwrite\verbatim@out % <===== ADDED HERE!!
+    \def\BeforeStream
+    {\message{Opening gnuplot stream #1}%
+        \immediate\write\verbatim@out{\string set terminal \gnuplotterminal \gnuplotterminaloptions}
+\immediate\write\verbatim@out{\string set output '\figname.\gnuplottexextension{\gnuplotterminal}'}
+    }
+    \@bsphack
+    \immediate\openout \verbatim@out #1
+    \BeforeStream%
+    \let\do\@makeother\dospecials
+    \catcode`\^^M\active
+    \def\verbatim@processline{%
+        \immediate\write\verbatim@out
+        {\the\verbatim@line}}%
+    \verbatim@start}
+\fi
+
+
+% Option: More compact ``in-line''-looking title than default
+\if@inlineheading
+%  \if@tpl
+%    \fancyhead[C]{\@subtitle}
+%  \fi
+  \if@scrtpl
+    \ohead{\itshape\@subject\upshape\qquad\@subtitle}
+  \fi
+%%MT-Problem
+\renewcommand{\maketitle}{
+\titlefont 
+\large\ifx\@subject\@empty \relax \else \@subject~\fi 
+
+\noindent\titlefont\huge \@title\par
+\vspace{0.1em}\par
+\large\if\author\relax \relax \else \@author\if@mentiondate,~\fi\fi
+\if@mentiondate\@date\par
+\vspace{0.4em}\par\fi
+\normalfont\normalsize
+}
+\fi
+
+
+
+
+\if@vsvn
+\RequirePackage[nofancy]{svninfo}
+\fi
+
+
+\if@vargreek
+\let\@oldGreek\theta
+\let\theta\vartheta
+\let\vartheta\@oldGreek
+\let\@oldGreek\rho
+\let\rho\varrho
+\let\varrho\@oldGreek
+\let\@oldGreek\phi
+\let\phi\varphi
+\let\varphi\@oldGreek
+\let\@oldGreek\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\@oldGreek
+\let\@oldGreek\relax
+\fi
+
+
+%%%%%%% Comfortable abbreviations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\zB}{z.\,B.\xspace} % Don't forget to use like \zB\ or \zB{} to prevent the following space to be eaten
+%% xspace checs automatically for next symbol and sourrounding modus (math, etc) and sets a space or not. clever :)
+\newcommand{\uA}{u.\,A.\xspace}
+\newcommand{\ua}{u.\,a.\xspace}
+
+\newcommand{\const}{\mathrm{const}}
+
+% abbreviate differential symbols -- think of the commath.sty package to provide similar functionality
+\newcommand{\diff}{\;\mathrm{d}}
+
+\newcommand{\dd}[2]{% Differentation -- use it as \ddx <differential> <differentiatied function> or \ddx <differential> \ ...
+\frac{\!\diff#2}{\!\diff#1}
+}
+
+\newcommand{\pp}[2]{% Partial differentiation -- use it the same way like \ddx
+\frac{\partial#2}{\partial#1}
+}
+
+\newcommand{\superscriptedoperator}[2][=]{\ensuremath{
+\stackrel{\mathsmaller{#2}}{#1}
+}}
+
+%\newcommand{\definedas}{\ensuremath{:=}}
+\newcommand{\definedas}{% for a uniform definition definition
+%\RequirePackage{relsize}
+\superscriptedoperator{\idx{def}}
+}
+
+\newcommand{\anm}[1]{
+\scriptsize 
+{\color{altcolor}{#1}}
+\normalsize
+}
+
+\newcommand{\todo}[2][]{{\if@everything\color{highlightcolor}\fi#1 {\scriptsize\texttt{TODO} #2}}}
+
+\newcommand{\@seite}[1]{\fcolorbox{linkcolor}{shadecolor}{\color{altcolor}{\anm{#1}}}}
+%\newcommand{\@seite}[1]{\fcolorbox{linkcolor}{shadecolor}{\color{altcolor}{\anm{#1}}}}
+\newcommand{\seite}[1]{
+\if@quer
+  \vspace{-1em}\begin{flushright}\@seite{#1}\end{flushright}\vspace{-1.5em}
+\else
+  \marginpar{\@seite{#1}}
+\fi
+}
+
+
+%\newcommand{\tensor}[1]{\ensuremath{\ushortd{#1}}}
+%\ushortCreate:\ushortdline()[+0.12em]{zweitensor}
+%\newcommand{\tensor}[2][2]{\zweitensor{#2}\,}% optionales Argument: für Stufe
+\newcommand{\tensor}[2][2]{
+\ifcase#1
+#2 \or
+\underline{#2} \or
+\underline{\underline{#2}} \or
+\underline{\underline{\underline{#2}}} \or
+\underline{\underline{\underline{\underline{#2}}}}
+\else
+\underline{\underline{#2}}
+\fi
+}
+
+\newcommand{\Psn}[2][H]{%Poisson bracket abbreviation
+\ensuremath{\vphantom{\rule{0em}{1.1em}}\left\{\vphantom{f}#2, #1\right\}}} % \mathstrut as a vertical spacer does not work as intended
+
+\newcommand{\PsnLong}[2][H]{%Explicite Poisson bracket
+\ensuremath{\pp {q^k}{#2}\pp {p_k}{#1} - \pp {p_k}{#2} \pp {q^k}{#1}}}
+
+\providecommand{\uglyunitfrac}[3][]{\ensuremath{#1\,\frac{\unit{#2}}{\unit{#3}}}}
+
+\providecommand{\bracketed}[1]{\ensuremath{\left[\vphantom{\rule{0em}{0.9em}}#1\right]}}
+\providecommand{\Unit}[1]{\bracketed{\unit{#1}}}
+\providecommand{\Unitfrac}[2]{\bracketed{\unitfrac{#1}{#2}}}
+\providecommand{\Uglyunitfrac}[2]{\bracketed{\!\uglyunitfrac{#1}{#2}}}
+
+
+\newcommand{\susz}{Suszeptibilität}
+
+\newcommand{\abs}[1]{\ensuremath{\left| #1 \right|}}
+\newcommand{\vecabs}[1]{\ensuremath{\lVert #1 \rVert}}
+\newcommand{\Abs}[1]{\vecabs{#1}}
+
+\newcommand{\idx}[1]{\ensuremath{\textnormal{#1}}}
+
+\newcommand{\Nabla}{\vec{\nabla}}
+\providecommand{\Laplace}{\bigtriangleup}
+
+
+% Bachmann-Landau Symbols to describe asymptotic behaviour of functions are typeset as uc/lc Greek Omicron resp. calligraphically
+\newcommand{\Omicron}{\mathcal{O}} % Unicode 927
+\newcommand{\omicron}{o} % Unicode 959
+
+
+% Option: Use a superposed T to symbolise the scalar vector product rather than a cdot
+%\newcommand{\transp}{{}^T\!}
+\newcommand{\transp}{{}^\textsl{T}\!}
+%\newcommand{\transp}{{}^\textnormal{T}\!}
+\if@skalart
+  \newcommand{\skalar}{\transp}
+\else
+  \newcommand{\skalar}{\cdot}
+  %\newcommand{\skalar}{\circ}
+\fi
+
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+\RequirePackage{eurosym} % nice Euro sign(s)
+\renewcommand{\euro}{\geneuronarrow}
+
+\newcommand{\Ref}[1]{\ref{#1} auf Seite \pageref{#1}} % TODO: Not internationalised!
+
+\newcommand{\gqq}[1]{\glqq{}#1\grqq{}} % to abbr quotation marks
+
+\newcommand{\equivhat}{{\ensuremath{\mathrel{\widehat{=}}}}}
+
+\newcommand{\approxhat}{{\ensuremath{\mathrel{\widehat{\approx}}}}}
+
+\newcommand{\einhalb}{\ensuremath{\nicefrac{1}{2}}} % NB spin etc.
+
+\renewcommand{\Hat}[1]{\hat{\vec{#1}}} % for vectorial QM operators
+
+% Variance abbrs
+\newcommand{\vari}[1]{\ensuremath{\operatorname{Var} #1}}
+\newcommand{\varilong}[1]{\ensuremath{\braket{#1^2} - \braket{#1}^2}}
+
+
+
+\newenvironment{figurehere}
+{\def\@captype{figure}}
+{}
+
+\if@everything
+\RequirePackage{tikz}
+\newcommand{\krz}{\raisebox{-0.16em}{\begin{tikzpicture}[y=0.095em, x=0.095em,yscale=-1, inner sep=0pt, outer sep=2pt]
+\begin{scope}[shift={(-144.65194,-100.87001)}]
+  \path[fill,nonzero rule] (152.0983,102.4104) .. controls
+    (151.3945,102.4104) and (150.8238,102.9807) .. (150.8238,103.6846) .. controls
+    (150.8238,104.0990) and (151.0217,104.4674) .. (151.3280,104.7001) --
+    (150.5466,106.2492) .. controls (150.4885,106.2385) and (150.4287,106.2335) ..
+    (150.3677,106.2335) .. controls (150.2955,106.2335) and (150.2249,106.2405) ..
+    (150.1570,106.2554) -- (149.5732,105.0100) .. controls (149.7784,104.8543) and
+    (149.9111,104.6079) .. (149.9111,104.3305) .. controls (149.9111,103.8597) and
+    (149.5294,103.4779) .. (149.0586,103.4779) .. controls (148.5878,103.4779) and
+    (148.2063,103.8597) .. (148.2063,104.3305) .. controls (148.2063,104.8013) and
+    (148.5878,105.1831) .. (149.0586,105.1831) .. controls (149.1077,105.1831) and
+    (149.1558,105.1791) .. (149.2026,105.1709) -- (149.7636,106.4346) .. controls
+    (149.7520,106.4436) and (149.7405,106.4519) .. (149.7294,106.4611) --
+    (146.9087,104.4532) .. controls (146.9679,104.3180) and (147.0008,104.1687) ..
+    (147.0008,104.0117) .. controls (147.0008,103.4030) and (146.5074,102.9096) ..
+    (145.8987,102.9096) .. controls (145.2900,102.9096) and (144.7963,103.4030) ..
+    (144.7963,104.0117) .. controls (144.7963,104.6204) and (145.2900,105.1141) ..
+    (145.8987,105.1141) .. controls (146.1837,105.1141) and (146.4433,105.0059) ..
+    (146.6390,104.8284) -- (149.4574,106.8088) .. controls (149.3952,106.9397) and
+    (149.3601,107.0862) .. (149.3601,107.2408) .. controls (149.3601,107.3640) and
+    (149.3823,107.4821) .. (149.4228,107.5912) -- (146.7331,109.6886) .. controls
+    (146.5491,109.5417) and (146.3161,109.4538) .. (146.0623,109.4538) .. controls
+    (145.4679,109.4538) and (144.9858,109.9356) .. (144.9858,110.5300) .. controls
+    (144.9858,111.1245) and (145.4679,111.6063) .. (146.0623,111.6063) .. controls
+    (146.6568,111.6063) and (147.1386,111.1245) .. (147.1386,110.5300) .. controls
+    (147.1386,110.3572) and (147.0976,110.1941) .. (147.0253,110.0494) --
+    (149.6667,107.9644) .. controls (149.6697,107.9674) and (149.6727,107.9704) ..
+    (149.6767,107.9744) -- (149.3204,108.6807) .. controls (149.2639,108.6686) and
+    (149.2052,108.6620) .. (149.1451,108.6620) .. controls (148.6838,108.6620) and
+    (148.3098,109.0360) .. (148.3098,109.4973) .. controls (148.3098,109.9586) and
+    (148.6838,110.3326) .. (149.1451,110.3326) .. controls (149.6064,110.3326) and
+    (149.9804,109.9586) .. (149.9804,109.4973) .. controls (149.9804,109.2350) and
+    (149.8593,109.0010) .. (149.6701,108.8478) -- (150.0271,108.1895) .. controls
+    (150.1335,108.2278) and (150.2483,108.2486) .. (150.3680,108.2486) .. controls
+    (150.4339,108.2486) and (150.4982,108.2426) .. (150.5606,108.2304) --
+    (151.4201,110.1662) .. controls (151.1012,110.3924) and (150.8930,110.7642) ..
+    (150.8930,111.1850) .. controls (150.8930,111.8745) and (151.4522,112.4336) ..
+    (152.1417,112.4336) .. controls (152.8313,112.4336) and (153.3901,111.8745) ..
+    (153.3901,111.1850) .. controls (153.3901,110.4954) and (152.8313,109.9366) ..
+    (152.1417,109.9366) .. controls (152.0572,109.9366) and (151.9746,109.9456) ..
+    (151.8949,109.9607) -- (150.9910,108.0328) .. controls (151.0231,108.0075) and
+    (151.0536,107.9804) .. (151.0824,107.9515) -- (153.2983,109.5094) .. controls
+    (153.2467,109.6269) and (153.2180,109.7569) .. (153.2180,109.8934) .. controls
+    (153.2180,110.4213) and (153.6459,110.8492) .. (154.1738,110.8492) .. controls
+    (154.7016,110.8492) and (155.1295,110.4213) .. (155.1295,109.8934) .. controls
+    (155.1295,109.3656) and (154.7016,108.9377) .. (154.1738,108.9377) .. controls
+    (153.9317,108.9377) and (153.7106,109.0277) .. (153.5422,109.1760) --
+    (151.3136,107.5894) .. controls (151.3536,107.4809) and (151.3754,107.3636) ..
+    (151.3754,107.2413) .. controls (151.3754,107.0537) and (151.3240,106.8780) ..
+    (151.2347,106.7276) -- (153.5907,104.8680) .. controls (153.7580,105.0006) and
+    (153.9695,105.0799) .. (154.1996,105.0799) .. controls (154.7418,105.0799) and
+    (155.1812,104.6405) .. (155.1812,104.0984) .. controls (155.1812,103.5562) and
+    (154.7418,103.1168) .. (154.1996,103.1168) .. controls (153.8493,103.1168) and
+    (153.5420,103.3004) .. (153.3683,103.5765) .. controls (153.3133,102.9235) and
+    (152.7660,102.4108) .. (152.0987,102.4108) -- cycle(153.2324,104.2668) ..
+    controls (153.2497,104.3662) and (153.2817,104.4608) .. (153.3265,104.5476) --
+    (151.0299,106.3383) -- (151.7966,104.9231) .. controls (151.8933,104.9466) and
+    (151.9944,104.9590) .. (152.0984,104.9590) .. controls (152.5925,104.9590) and
+    (153.0210,104.6778) .. (153.2324,104.2668) -- cycle;
+\end{scope}
+\end{tikzpicture}}}
+\fi
+
+
+% EOF

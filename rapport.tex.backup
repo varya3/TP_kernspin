@@ -6,14 +6,14 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{isotope}
-\usepackage{units}
 \usepackage{float}
 \usepackage{scrpage2}
+\usepackage{vanadin}
   
 
-\title{TP Cesire \isotope[13]{C} en RMN}
-\author{Mona Dentler, Sabine Engelhardt et Laura Hilpert}
-%mitautor Michel Bardet, Sabine Herdiger
+\title{Résonance magnétique nucléaire (RMN) du \isotope[13]{C} haute résolution en phase solide}
+\subtitle{TP Cesire}
+\author{Mona Dentler,\\ Sabine Engelhardt et Laura Hilpert}
 \publishers{Université Joseph Fourier, CEA Grenoble}
 
  \begin{document}
@@ -26,13 +26,12 @@
   \vspace{2cm}
 
   \Huge
-  TP Cesire \isotope[13]{C} en RMN\newline
+  Résonance magnétique nucléaire (RMN) du \isotope[13]{C} haute résolution en phase solide\newline
+  \Large TP Cesire
   \vspace{1cm}
-  \Large
-
 
   \@author
-  \newline
+  \newline\empty\\
   \@publishers
 
 
@@ -42,27 +41,38 @@
  \vfill
 
  \begin{abstract}
-  Le but de ce TP Cesire est de comprendre comment faire un RMN des solides. On sait déjà très bien faire un RMN de solution, mais pour un solide il y a quelques problèmes. Un solide est inhomogène et il y a la force dipôlaire qui dérange la mesure car les atomes sont fortement couplés. En solution cette force se moyenne à zéro.\\ 
-  Comment alors obtenir un bon image d'un solide? D'abord nous avons appris un peu de la théorie d'un RMN et sutout les solutions pour faire un RMN d'un solide pour ensuite les vérifier en mesurant. 
+  Le but de ce TP Cesire est de comprendre comment faire spectre des solides à l'aide d'une RMN. On le sait déjà très bien faire pour une solution, mais pour un solide il y a quelques problèmes. Un solide est inhomogène et il y a la force dipôlaire qui dérange la mesure, car les atomes sont fortement couplés. En solution cette force se moyenne à zéro.\\ 
+  Comment alors obtenir un bon spectre d'un solide? D'abord nous avons appris un peu de la théorie d'une RMN et surtout les solutions pour faire une RMN d'un solide pour ensuite les vérifier en mesurant. 
  \end{abstract}
  \newpage
 \pagestyle{scrheadings}
  \tableofcontents
 
- \section{RMN}
+ \section{Résonance Magnétique Nucléaire (RMN)}
+  \subsection{Fonctionnement d'une RMN}
+  La RMN use la résonance de spin des noyeaux atomiques. L'échantillon est mis dans un champ magnétique $B_0$ externe pour avoir les moments magnétiques des atomes paralell ou anti-paralell au $B_0$. Par conséquence le moment magnétique d'un atome tourne autour cette direction avec la fréquence de Larmor $\omega_L=\frac{\gamma}{2\pi}B_0$ avec $\gamma$ le rapport gyromagnétique. $\omega_L$ est specifique pour chaque materiél, à cause du moment angulaire de l'atome. Le champ magnétique est donc augmenté dans cette direction, mais cette augmentataion est à peine mesurable, alors on use une autre méthode.\\
+  Une onde électro-magnétique (em) avec la fréquence $\omega_L$ en grandeur des ondes radio est envoyé à l'échantillon. Les moments magnétiques commencent à basculer car l'onde em leurs donne l'énergie qui est necessaire jusqu'à ce qu'ils soient à \unit[90]{\degree} au $B_o$. Dans cette direction on peut mesurer le champ magnétique $M$ causé par les moments magnétique qui est perpendiculaire au $B_0$.\\
+  Si on arrête l'onde em les moments magnétique se remettent en position originale. Cette relaxation est dû à l'interaction spin-spin et à l'interaction de spin-atome. Le temps de relaxation est différent pour chaque matériel et en mesurant le changement de $M$ on peut y déduire le temps de relaxation.   \newline
+  L'atome le plus simple de détecter est l'Hydrogène H. Cet atome a un moment magnétique très fort et donc il est facile à tourné par l'onde em.
+
   \subsection{RMN d'une solution}
+   Avec cette dispositif on peut faire un spectre très précise d'une solution. Une solution est isotrope donc il n'y a pas des interactions qui dérange la mesure. On obtient des spectre avec des pics trés précis et grand.
 
   \subsection{Problématique d'un RMN d'un solide}
-   
-  \subsection{Solutions}
-   \subsubsection{Découplage}
+   Si on essaie de faire un spectre avec ce dispositif, on ne voit presque rien. La couplage forte entre les atomes provoque une relaxation assez vite et on ne peut plus distingué entre les différent atomes. En plus un solide est anisotrope donc à chaque l'angle on trouve un autre ordre des atomes. 
 
+  \subsection{Solutions}
+   Car nous avons fait des RMN du \isotope[13]{C}, nous présontons les solution pour cet isotope.
+
+   
    \subsubsection{Übertragung Magnetisierung}
 
    \subsubsection{Rotation de l'angle magique}
 
    \subsubsection{Puissance de Hartmann-Hahn}
- 
+    
+   \subsubsection{Découplage}
+    Pendant la temps de mesure on peut découpler les atomes H des atomes C en envoyant une onde em pour fixer le moment magnétique de H perpendiculaire 
  
 
  \section{Dispositif expérimental}
@@ -106,11 +116,13 @@
     \caption{\label{rotation}Les spectres pour les différents fréquences.}
    \end{figure}
    \paragraph{Interprétation}
-    On voit bien dans les spectres de la figure \ref{rotation} à la p. \pageref{rotation} que les signaux qu'on veut obtenir se dimunue porportionnelement à la fréquence de la rotation. Dans le premir spectre avec \unit[4]{kHz} on ne voit que les deux pics de \textcolor{red}{welche?} C et C. Dans le deuxième spectre on voit déjá les bandes rotationelles. On sait que ce sont des bandes rotationnelles car la \textcolor{red}{Abstand} entre le signal vraie et ses bandes rotationelles est $d=n\cdot f_{rot}$ avev $f_{rot}$ la fréquence de la rotation de l'angle magique.
+    On voit bien dans les spectres de la figure \ref{rotation} à la p. \pageref{rotation} que les signaux qu'on veut obtenir se dimunue porportionnelement à la fréquence de la rotation. C'est à cause de la nombre de pics qui augmente. La même \textcolor{red}{Anzahl} de signaux est detéctés, mais il sont distribue sur différents pics. Dans le premier spectre avec \unit[4]{kHz} on ne voit que les deux pics fines assez grands de \textcolor{red}{welche?} C et C. Dans le deuxième spectre on voit déjá plusieurs autres pics, les bandes rotationelles. On sait que ce sont des bandes rotationnelles car la \textcolor{red}{Abstand} entre le signal vraie et ses bandes rotationelles est $d=n\cdot f_{rot}$ avec $f_{rot}$ la fréquence de la rotation de l'angle magique. Dans le dernier spectre on ne voit rien. Il n' y a qu'un pic très large avec le maximum même pas à la position correcte. Le deuxième pic, le plus petit, n'est plus vue.
+
    \paragraph{Conclusion}
     Donc nous avons vu que c'est vraie quand diminue les artefacts causé par l'inhomogenité \textcolor{red}{???} du solide avec la rotation de l'angle magique. 
 
   \subsection{Temps de contact}
+   Le temps de contact c'est le temps pendant laquelle on transfere \textcolor{red}{die Quermagnetisierung} des atomes d'H aux atomes de C.
 
   \subsection{Puissance de Hartmann-Hahn}
  
@@ -120,18 +132,29 @@
   \subsection{Condition liquide}
  
   \subsection{CP masse}
+
+  \subsection{DEPT ?}
+   Spektrum mit gekippten Peaks, wenn an ungerader Anzahl von Protonen, irgenwie mit Kopplung
+
+  \subsection{2D-Spektrum}
+   wie Dept, aber Entkopplung glaube ich später
  
  
 
  \section{Cellulose}
-  \subsection{mit Wasserpeak}
+  \subsection{Spectre \isotope[13]{C}}
+   nicht erkennbar was was ist, am Ende Spektum nochmal zeigen +beschriftet  
+
+  \subsection{Spectre H}
+   Wasser peak und Artefakt, bandes rotationelles
 
   \subsection{Spin-diffusion}
   
   \subsection{Inadequate}
 
   \subsection{Hetcore}
-
+ 
+   abgeschnitten Spinning sidebands, noch da fehler wegen zu kurz gemessen = Signal abgeschnitten
  
  
 

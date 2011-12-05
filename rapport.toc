@@ -1,35 +1,35 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}RMN}{3}
-\contentsline {subsection}{\numberline {1.1}RMN d'une solution}{3}
-\contentsline {subsection}{\numberline {1.2}Probl\IeC {\'e}matique d'un RMN d'un solide}{3}
-\contentsline {subsection}{\numberline {1.3}Solutions}{3}
-\contentsline {subsubsection}{\numberline {1.3.1}D\IeC {\'e}couplage}{3}
-\contentsline {subsubsection}{\numberline {1.3.2}\IeC {\"U}bertragung Magnetisierung}{3}
-\contentsline {subsubsection}{\numberline {1.3.3}Rotation de l'angle magique}{3}
-\contentsline {subsubsection}{\numberline {1.3.4}Puissance de Hartmann-Hahn}{3}
-\contentsline {section}{\numberline {2}Dispositif exp\IeC {\'e}rimental}{3}
-\contentsline {subsection}{\numberline {2.1}Montage exp\IeC {\'e}rimental}{3}
-\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}liminaire}{3}
-\contentsline {subsection}{\numberline {2.3}Influence des param\IeC {\`e}tres sur la mesure}{4}
-\contentsline {subsubsection}{\numberline {2.3.1}Nombre de scans}{4}
-\contentsline {subsubsection}{\numberline {2.3.2}Fr\IeC {\'e}quence de la rotation}{4}
-\contentsline {subsubsection}{\numberline {2.3.3}Temps de contact}{4}
-\contentsline {subsubsection}{\numberline {2.3.4}Puissance des signaux}{4}
-\contentsline {section}{\numberline {3}Glycerine}{4}
-\contentsline {subsection}{\numberline {3.1}Rotation de l'angle magique}{4}
-\contentsline {paragraph}{Interpr\IeC {\'e}tation}{6}
-\contentsline {paragraph}{Conclusion}{6}
-\contentsline {subsection}{\numberline {3.2}Temps de contact}{6}
-\contentsline {subsection}{\numberline {3.3}Puissance de Hartmann-Hahn}{6}
-\contentsline {section}{\numberline {4}Graines de salade}{6}
-\contentsline {subsection}{\numberline {4.1}Condition liquide}{6}
-\contentsline {subsection}{\numberline {4.2}CP masse}{6}
-\contentsline {subsection}{\numberline {4.3}DEPT ?}{6}
-\contentsline {subsection}{\numberline {4.4}2D-Spektrum}{6}
-\contentsline {section}{\numberline {5}Cellulose}{6}
-\contentsline {subsection}{\numberline {5.1}Spectre \isotope [13]{C}}{6}
-\contentsline {subsection}{\numberline {5.2}Spectre H}{7}
-\contentsline {subsection}{\numberline {5.3}Spin-diffusion}{7}
-\contentsline {subsection}{\numberline {5.4}Inadequate}{7}
-\contentsline {subsection}{\numberline {5.5}Hetcore}{7}
-\contentsline {section}{\numberline {6}Conclusion}{7}
+\contentsline {section}{\numberline {1}R\IeC {\'e}sonance Magn\IeC {\'e}tique Nucl\IeC {\'e}aire (RMN)}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Fonctionnement d'une RMN}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}RMN d'une solution}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Probl\IeC {\'e}matique d'un RMN d'un solide}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Solutions}{4}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}D\IeC {\'e}couplage dipolaire}{4}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Rotation de l'angle magique}{4}{subsubsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.3}Polarisation crois\IeC {\'e}e}{4}{subsubsection.1.4.3}
+\contentsline {section}{\numberline {2}Dispositif exp\IeC {\'e}rimental}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Montage exp\IeC {\'e}rimental}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}liminaire}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Influence des param\IeC {\`e}tres sur la mesure}{5}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Nombre de scans}{5}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Fr\IeC {\'e}quence de la rotation}{5}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Temps de contact}{5}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Puissance des signaux}{5}{subsubsection.2.3.4}
+\contentsline {section}{\numberline {3}Glycerine}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Rotation de l'angle magique}{5}{subsection.3.1}
+\contentsline {paragraph}{Interpr\IeC {\'e}tation}{7}{section*.2}
+\contentsline {paragraph}{Conclusion}{7}{section*.3}
+\contentsline {subsection}{\numberline {3.2}Temps de contact}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Puissance de Hartmann-Hahn}{7}{subsection.3.3}
+\contentsline {section}{\numberline {4}Graines de salade}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Condition liquide}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}CP masse}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}DEPT ?}{7}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}2D-Spektrum}{7}{subsection.4.4}
+\contentsline {section}{\numberline {5}Cellulose}{8}{section.5}
+\contentsline {subsection}{\numberline {5.1}Spectre \isotope [13]{C}}{8}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Spectre H}{8}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Spin-diffusion}{8}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Inadequate}{8}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Hetcore}{8}{subsection.5.5}
+\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}
