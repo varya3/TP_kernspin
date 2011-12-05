@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.18)  5 DEC 2011 18:50
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.18)  5 DEC 2011 20:38
 entering extended mode
  %&-line parsing enabled.
 **rapport.tex
@@ -1027,9 +1027,9 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \tab@size=\count128
 \listing@line=\count129
 )
-runsystem(touch /tmp/w18-test-20111251130)...disabled.
+runsystem(touch /tmp/w18-test-20111251238)...disabled.
 
-runsystem(rm -f /tmp/w18-test-20111251130)...disabled.
+runsystem(rm -f /tmp/w18-test-20111251238)...disabled.
 
 
 
@@ -1437,19 +1437,19 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 3.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 11.
+(scrartcl)            on input line 10.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 19.
+(scrartcl)            on input line 18.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 25.
+(scrartcl)            on input line 24.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 30.
+(scrartcl)            on input line 29.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 36.
+(scrartcl)            on input line 35.
 )
 \tf@toc=\write6
 \openout6 = `rapport.toc'.
@@ -1466,58 +1466,78 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 57.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 5.51999pt on input line 57.
- [2] [3] [4]
-Overfull \hbox (3.16092pt too wide) in paragraph at lines 104--105
+ [2]
+Overfull \hbox (3.06184pt too wide) in paragraph at lines 59--62
+\T1/futs/m/n/12 donc pro-por-tio-nel à la gran-deur de $\FML/futmi/m/it/12 B[]$
+ \T1/futs/m/n/12 et an-ti-pro-por-tio-nel à la tem-pé-ra-ture de l'échan-
+ []
+
+[3]
+Overfull \hbox (70.02504pt too wide) in alignment at lines 87--90
+ [][][] []
+ []
+
+[4] <bilder/schema_pol.png, id=194, 351.2322pt x 213.1965pt>
+File: bilder/schema_pol.png Graphic file (type png)
+
+<use bilder/schema_pol.png> [5 <./bilder/schema_pol.png (PNG copy)>]
+Overfull \hbox (3.16092pt too wide) in paragraph at lines 123--124
 []\T1/futs/m/n/12 Pour voir que l'écha-tillon est bien placé et le dis-po-si-ti
 f est bien ca-li-bré il faut d'abord
  []
 
-<bilder/rotation.png, id=197, 845.559pt x 596.9502pt>
+[6] <bilder/rotation.png, id=204, 845.559pt x 596.9502pt>
 File: bilder/rotation.png Graphic file (type png)
 
 <use bilder/rotation.png>
-<bilder/rotation2.png, id=198, 845.559pt x 596.9502pt>
+<bilder/rotation2.png, id=205, 845.559pt x 596.9502pt>
 File: bilder/rotation2.png Graphic file (type png)
 
-<use bilder/rotation2.png> [5]
+<use bilder/rotation2.png> [7]
 Overfull \vbox (30.21211pt too high) has occurred while \output is active []
 
 
-[6 <./bilder/rotation.png (PNG copy)> <./bilder/rotation2.png (PNG copy)>]
+[8 <./bilder/rotation.png (PNG copy)> <./bilder/rotation2.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 148.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 155.
+(Font)              scaled to size 13.24796pt on input line 174.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 155.
+(Font)              scaled to size 7.35999pt on input line 174.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 155.
+(Font)              scaled to size 13.24796pt on input line 174.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 155.
+(Font)              scaled to size 7.35999pt on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\isotope' on input line 155.
+(hyperref)                removing `\isotope' on input line 174.
 
-[7] [8] (./rapport.aux) ) 
+[9] [10] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 17041 strings out of 495028
- 268168 string characters out of 1181228
- 379511 words of memory out of 3000000
- 19726 multiletter control sequences out of 15000+50000
- 109773 words of font info for 131 fonts, out of 3000000 for 9000
+ 17071 strings out of 495028
+ 268922 string characters out of 1181228
+ 378374 words of memory out of 3000000
+ 19747 multiletter control sequences out of 15000+50000
+ 110513 words of font info for 134 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 60i,12n,73p,981b,894s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsubsection.1.4.4} has b
-een referenced but does not exist, replaced by a fixed one
-
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/e
-nc/dvips/lm/lm-ec.enc}</usr/share/texmf-texlive/fonts/type1/public/fourier/four
-ier-mlit.pfb></usr/share/texmf-texlive/fonts/type1/public/fourier/fourier-ms.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf-texliv
-e/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texmf-texlive/fonts/type1/ado
-be/utopia/putri8a.pfb>
-Output written on rapport.pdf (8 pages, 155163 bytes).
+ 60i,13n,73p,1049b,842s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/sabine/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ectt0800.600pk>{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}{/usr/sha
+re/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-texlive/fonts/type1/pub
+lic/fourier/fourier-mex.pfb></usr/share/texmf-texlive/fonts/type1/public/fourie
+r/fourier-ml.pfb></usr/share/texmf-texlive/fonts/type1/public/fourier/fourier-m
+lit.pfb></usr/share/texmf-texlive/fonts/type1/public/fourier/fourier-ms.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf-texlive/fon
+ts/type1/adobe/utopia/putr8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/ut
+opia/putri8a.pfb>
+Output written on rapport.pdf (10 pages, 185272 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 274 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
