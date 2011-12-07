@@ -80,13 +80,14 @@
     \begin{equation*}
      B_{eff}=B_0 + B_{couplage} 
     \end{equation*}
-    avec $B_{couplage}$ le champ local autour d'atome causé par les interactions dipolaire et scalaires entre les atomes. Par une onde em de haute puissance les couplages entre H et \isotope[13]{C} sont éliminés car l'H est plus sensible que le \isotope[13]{C} et on se  débarasse de l'aimantion $H$ d'H. La découplage est très important pendant le temps de mesure la relaxation de \isotope[13]{C}. On peut aussi applicer une impulsion de \unit[90]{\degree} et ensuite changer la phase de l'onde par $\nicefrac{\pi}{2}$ pour garder le moment magnétique perpendiculaire d'H (spin-lock), alors le couplage dipolaire est éliminé. 
+    avec $B_{couplage}$ le champ local autour d'atome causé par les interactions dipolaire et scalaires entre les atomes. Par une onde em de haute puissance les couplages entre H et \isotope[13]{C} sont éliminés car l'H est plus sensible que le \isotope[13]{C} et on se  débarasse de l'aimantation $H$ d'H. La découplage est très important pendant le temps de mesure la relaxation de \isotope[13]{C}. On peut aussi applicer une impulsion de \unit[90]{\degree} et ensuite changer la phase de l'onde par $\nicefrac{\pi}{2}$ pour garder le moment magnétique perpendiculaire d'H (spin-lock), alors le couplage dipolaire est éliminé. 
 
    \subsubsection{Rotation de l'angle magique}
-    On trouve pour l'aimantion
+    On trouve pour l'aimantation
     \begin{eqnarray*}
-     H_{\sigma}&=&\hbar H_0\gamma I_z\left(\frac{1}{2}\sin\left(2\alpha\right)\text{tr}\left(\sigma\right)+\frac{1}{2}\left(3\cos^2\alpha-1\right)\sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi_i\right)\right)\right)\\
-     H_{\sigma}\left(t\right)&=&\hbar H_0\gamma I_z\left(\frac{1}{2}\sin\left(2\alpha\right)\sum_i\sigma_i\sin\left(2\beta_i\right)\cos\left(\omega_r t+\Phi_i\right)+\frac{1}{2}\sin^2\alpha \sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi_i\right)\right)\right)
+     H_{\sigma}&=&\hbar H_0\gamma I_z&\left(\frac{1}{2}\sin\left(2\alpha\right)\text{tr}\left(\sigma\right)+\frac{1}{2}\left(3\cos^2\alpha-1\right)\sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi_i\right)\right)\right)\\
+     H_{\sigma}\left(t\right)&=&\hbar H_0\gamma I_z&\left(\frac{1}{2}\sin\left(2\alpha\right)\sum_i\sigma_i\sin\left(2\beta_i\right)\cos\left(\omega_r t+\Phi_i\right)\right.\\
+		& & &\left.+\frac{1}{2}\sin^2\alpha \sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi _i\right)\right)\right)
     \end{eqnarray*}
     Avec $\alpha=\unit[54,7]{\degree}$ donc $3\cos^2\alpha-1=0$ entre l'échantillon et $B_0$ on se débarasse du second terme de la première équation. C'est à dire que les interactions dipolaires et quadrupolaire et l'effet de l'anisotropie de déplacement chimique sont éliminés. Une rotation suffisamment vite elimine la dépendance du temps du deuxième équation. Avec une rotation trop lente il y a plusieurs raies avec une distance égale à la vitesse de la rotation. Le raie le plus grand n'doit pas être celui du vrai signal. 
 
@@ -148,10 +149,10 @@
     On voit bien dans les spectres de la figure \ref{rotation} à la p. \pageref{rotation} que les signaux qu'on veut obtenir se dimunue porportionnelement à la fréquence de la rotation. C'est à cause de la nombre de pics qui augmente. La mêmenombre de signaux est detéctés, mais il sont distribue sur différents pics. Dans le premier spectre avec \unit[4]{kHz} on ne voit que les deux pics fines assez grands de \todo{welche genau?} C et C. Dans le deuxième spectre on voit déjá plusieurs autres pics, les bandes rotationelles. On sait que ce sont des bandes rotationnelles car la distance entre le signal vraie et ses bandes rotationelles est $d=n\cdot f_{rot}$ avec $f_{rot}$ la fréquence de la rotation de l'angle magique. Dans le dernier spectre on ne voit rien. Il n' y a qu'un pic très large avec le maximum même pas à la position correcte. Le deuxième pic, le plus petit, n'est plus vue.
 
    \paragraph{Conclusion}
-    Donc nous avons vu que c'est vraie quand diminue les artefacts causé par l'inhomogenité \textcolor{red}{???} du solide avec la rotation de l'angle magique. 
+    Donc nous avons vu que c'est vraie quand diminue les artefacts causé par le déplacement chimique du solide avec la rotation de l'angle magique. 
 
   \subsection{Temps de contact}
-   Le temps de contact c'est le temps pendant laquelle on transfere \textcolor{red}{die Quermagnetisierung} des atomes d'H aux atomes de C.
+   Le temps de contact c'est le temps pendant laquelle on transfere l'aimantation de \unit[90]{\degree} des atomes d'H aux atomes de C.
 
   \subsection{Puissance de Hartmann-Hahn}
  
@@ -159,32 +160,105 @@
 
  \section{Graines de salade}
   \subsection{Condition liquide}
- 
-  \subsection{CP masse}
+ \begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/graine_liquide.png}
+    \caption{graine de salade: condition liquide}
+   \end{figurehere}
 
+  \subsection{CP masse}
+ \begin{figurehere}
+    \center
+     \includegraphics[width=0.5\textwidth]{bilder/PDSD1.png}
+     \caption{sequence de réalisation de \isotope[13]{C} - \isotope[13]{C} dipolaire couplage dans des conditions CP/MAS}
+    \end{figurehere}
+ \begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/graine_solide.png}
+    \caption{graine de salade: CP masse}
+   \end{figurehere}
+ \begin{figurehere}
+     \begin{minipage}{0.5\textwidth}
+      \centering
+     \includegraphics[width=0.5\textwidth]{bilder/graine_sans_rot.png}   
+     \caption{graine de salade: sans rotation en angle magique}   
+     \label{fig:sansrot}  
+   \end{minipage}
+   \hfill
+   \begin{minipage}[H]{0.5\textwidth}
+        \centering
+       	\includegraphics[width=0.5\textwidth]{bilder/graine_sans_decouplage.png}
+        \caption{graine de salade: sans découplage}
+   \end{minipage}
+    \end{figurehere}
   \subsection{DEPT ?}
-   Spektrum mit gekippten Peaks, wenn an ungerader Anzahl von Protonen, irgenwie mit Kopplung
+\begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/DEPT.png}
+    \caption{sequence DEPT}
+   \end{figurehere}  
 
   \subsection{2D-Spektrum}
    wie Dept, aber Entkopplung glaube ich später
- 
+  \begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/dept_2d.png}
+    \caption{DEPT 2D}
+   \end{figurehere}
  
 
  \section{Cellulose}
   \subsection{Spectre \isotope[13]{C}}
+ \begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/c13_spektum.png}
+    \caption{spectre du \isotope[13]{C}, les pics en centre ne sont pas defini. On va arriver une mieux definition avec des methodes differentes suivantes}
+   \end{figurehere}
    nicht erkennbar was was ist, am Ende Spektum nochmal zeigen +beschriftet  
 
   \subsection{Spectre H}
    Wasser peak und Artefakt, bandes rotationelles
-
+\begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/proton_spektrum.png}
+    \caption{spectre H avec un atefact et un pic d'eau liquide}
+   \end{figurehere}
   \subsection{Spin-diffusion}
+\begin{figurehere}
+    \center
+     \includegraphics[width=0.5\textwidth]{bilder/PDSD2.png}
+     \caption{sequence de réalisation de 2D - \isotope[13]{C} - \isotope[13]{C} dipolaire couplage experiment}
+    \end{figurehere}
+\begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/spin_diff.png}
+    \caption{proton driven spin-diffusion: \isotope[13]{C} - \isotope[13]{C} dipolaire couplage experiment}
+   \end{figurehere}
   
   \subsection{Inadequate}
-
+\begin{figurehere}
+    \center
+     \includegraphics[width=0.5\textwidth]{bilder/PDSD4.png}
+     \caption{sequence de réalisation de \isotope[13]{C} - \isotope[13]{C} J-couplage experiment}
+    \end{figurehere}
+\begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/inad.png}
+    \caption{2D-INADEQUATE: \isotope[13]{C} - \isotope[13]{C} J-couplage }
+   \end{figurehere}
   \subsection{Hetcore}
  
    abgeschnitten Spinning sidebands, noch da fehler wegen zu kurz gemessen = Signal abgeschnitten
- 
+\begin{figurehere}
+    \center
+     \includegraphics[width=0.5\textwidth]{bilder/PDSD3.png}
+     \caption{sequence de réalisation de \isotope[1]{H} - \isotope[13]{C} couplage transfert experiment}
+    \end{figurehere}
+ \begin{figurehere}
+    \center
+    \includegraphics[width=0.5\textwidth]{bilder/hetcor.png}
+    \caption{2D-HETCOR: H - \isotope[13]{C} couplage }
+   \end{figurehere}
  
 
  \section{Conclusion}

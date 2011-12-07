@@ -9,7 +9,7 @@
 \contentsline {subsubsection}{\numberline {1.4.3}Polarisation crois\IeC {\'e}e}{5}{subsubsection.1.4.3}
 \contentsline {section}{\numberline {2}Dispositif exp\IeC {\'e}rimental}{6}{section.2}
 \contentsline {subsection}{\numberline {2.1}Montage exp\IeC {\'e}rimental}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}liminaire}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}liminaire}{7}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Influence des param\IeC {\`e}tres sur la mesure}{7}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Nombre de scans}{7}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Fr\IeC {\'e}quence de la rotation}{7}{subsubsection.2.3.2}
