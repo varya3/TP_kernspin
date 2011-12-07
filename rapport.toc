@@ -9,7 +9,7 @@
 \contentsline {subsubsection}{\numberline {1.4.3}Polarisation crois\IeC {\'e}e}{5}{subsubsection.1.4.3}
 \contentsline {section}{\numberline {2}Dispositif exp\IeC {\'e}rimental}{6}{section.2}
 \contentsline {subsection}{\numberline {2.1}Montage exp\IeC {\'e}rimental}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}liminaire}{7}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}liminaire}{6}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Influence des param\IeC {\`e}tres sur la mesure}{7}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Nombre de scans}{7}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Fr\IeC {\'e}quence de la rotation}{7}{subsubsection.2.3.2}
@@ -20,16 +20,16 @@
 \contentsline {paragraph}{Interpr\IeC {\'e}tation}{9}{section*.2}
 \contentsline {paragraph}{Conclusion}{9}{section*.3}
 \contentsline {subsection}{\numberline {3.2}Temps de contact}{9}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Puissance de Hartmann-Hahn}{9}{subsection.3.3}
-\contentsline {section}{\numberline {4}Graines de salade}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}Condition liquide}{9}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}CP masse}{10}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}DEPT ?}{11}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}2D-Spektrum}{11}{subsection.4.4}
-\contentsline {section}{\numberline {5}Cellulose}{12}{section.5}
-\contentsline {subsection}{\numberline {5.1}Spectre \isotope [13]{C}}{12}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Spectre H}{12}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Spin-diffusion}{13}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Inadequate}{13}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Hetcore}{14}{subsection.5.5}
-\contentsline {section}{\numberline {6}Conclusion}{15}{section.6}
+\contentsline {subsection}{\numberline {3.3}Puissance de Hartmann-Hahn}{11}{subsection.3.3}
+\contentsline {section}{\numberline {4}Graines de salade}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Condition liquide}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}CP/MAS}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}DEPT }{14}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}2D-Spektrum}{15}{subsection.4.4}
+\contentsline {section}{\numberline {5}Cellulose}{15}{section.5}
+\contentsline {subsection}{\numberline {5.1}Spectre \isotope [13]{C}}{15}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Spectre H}{16}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Spin-diffusion}{16}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Inadequate}{18}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Hetcore}{19}{subsection.5.5}
+\contentsline {section}{\numberline {6}Conclusion}{19}{section.6}

@@ -9,6 +9,8 @@
 \usepackage{float}
 \usepackage{scrpage2}
 \usepackage{vanadin}
+\usepackage[version=3]{mhchem}
+
   
 
 \title{Résonance magnétique nucléaire (RMN) du \isotope[13]{C} haute résolution en phase solide}
@@ -85,9 +87,8 @@
    \subsubsection{Rotation de l'angle magique}
     On trouve pour l'aimantation
     \begin{eqnarray*}
-     H_{\sigma}=&\hbar H_0\gamma I_z&\left(\frac{1}{2}\sin\left(2\alpha\right)\text{tr}\left(\sigma\right)+\frac{1}{2}\left(3\cos^2\alpha-1\right)\sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi_i\right)\right)\right)\\
-     H_{\sigma}\left(t\right)=&\hbar H_0\gamma I_z&\left(\frac{1}{2}\sin\left(2\alpha\right)\sum_i\sigma_i\sin\left(2\beta_i\right)\cos\left(\omega_r t+\Phi_i\right)\right.\\
-		& & \left.+\frac{1}{2}\sin^2\alpha \sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi _i\right)\right)\right)
+     H_{\sigma}&=&\hbar H_0\gamma I_z\left(\frac{1}{2}\sin\left(2\alpha\right)\text{tr}\left(\sigma\right)+\frac{1}{2}\left(3\cos^2\alpha-1\right)\sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi_i\right)\right)\right)\\
+     H_{\sigma}\left(t\right)&=&\hbar H_0\gamma I_z\left(\frac{1}{2}\sin\left(2\alpha\right)\sum_i\sigma_i\sin\left(2\beta_i\right)\cos\left(\omega_r t+\Phi_i\right)+\frac{1}{2}\sin^2\alpha \sum_i\sigma_i\sin^2\beta_i\cdot\cos\left(2\left(\omega_r t+\Phi_i\right)\right)\right)
     \end{eqnarray*}
     Avec $\alpha=\unit[54,7]{\degree}$ donc $3\cos^2\alpha-1=0$ entre l'échantillon et $B_0$ on se débarasse du second terme de la première équation. C'est à dire que les interactions dipolaires et quadrupolaire et l'effet de l'anisotropie de déplacement chimique sont éliminés. Une rotation suffisamment vite elimine la dépendance du temps du deuxième équation. Avec une rotation trop lente il y a plusieurs raies avec une distance égale à la vitesse de la rotation. Le raie le plus grand n'doit pas être celui du vrai signal. 
 
@@ -141,9 +142,9 @@
   \subsection{Rotation de l'angle magique}
    La première expérience était de changé la fréquence de la rotation de l'angle magique. On a dit que le solide semble plus homogène le plus vite il est tourné. Nous avons fait une mesure avec une rotation à \unit[4]{kHz}, puis \unit[3]{kHz}, \unit[2]{kHz}, \unit[1]{kHz}, \unit[0,75]{kHz}, \unit[0,5]{kHz},\unit[0,2]{kHz} et sans rotation. Dès la mesure de \unit[0,75]{kHz} nous avons augmenté le nombre de scans de 4 à 16 pour obtenir un meilleur spectre. 
    \begin{figure}[H]
-    \includegraphics[width=\textwidth]{bilder/rotation.png}
+   \includegraphics[width=\textwidth]{bilder/rotation.png}
     \includegraphics[width=\textwidth]{bilder/rotation2.png}
-    \caption{\label{rotation}Les spectres pour les différents fréquences.}
+    \caption{\label{rotation}Les spectres pour les différents fréquences}
    \end{figure}
    \paragraph{Interprétation}
     On voit bien dans les spectres de la figure \ref{rotation} à la p. \pageref{rotation} que les signaux qu'on veut obtenir se dimunue porportionnelement à la fréquence de la rotation. C'est à cause de la nombre de pics qui augmente. La mêmenombre de signaux est detéctés, mais il sont distribue sur différents pics. Dans le premier spectre avec \unit[4]{kHz} on ne voit que les deux pics fines assez grands de \todo{welche genau?} C et C. Dans le deuxième spectre on voit déjá plusieurs autres pics, les bandes rotationelles. On sait que ce sont des bandes rotationnelles car la distance entre le signal vraie et ses bandes rotationelles est $d=n\cdot f_{rot}$ avec $f_{rot}$ la fréquence de la rotation de l'angle magique. Dans le dernier spectre on ne voit rien. Il n' y a qu'un pic très large avec le maximum même pas à la position correcte. Le deuxième pic, le plus petit, n'est plus vue.
@@ -153,20 +154,36 @@
 
   \subsection{Temps de contact}
    Le temps de contact c'est le temps pendant laquelle on transfere l'aimantation de \unit[90]{\degree} des atomes d'H aux atomes de C.
-
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{bilder/figure3.png}
+    \includegraphics[width=\textwidth]{bilder/figure4.png}
+    \caption{Les spectres pour les différents temps de contact}
+   \end{figure}
   \subsection{Puissance de Hartmann-Hahn}
- 
+ \begin{figure}[H]
+    \includegraphics[width=\textwidth]{bilder/figure5.png}
+  \end{figure}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{bilder/figure6.png}
+  \end{figure}
+\begin{figure}[H]
+ \includegraphics[width=\textwidth]{bilder/figure7.png}
+    \caption{Les spectres pour les différents puissances}
+   \end{figure}
  
 
  \section{Graines de salade}
+Maintenant nous faisons des spectres des graines de salade. C'est particulièrement	 intéressant, parce qu'il y a 	 autant le phase liquide que le phase solide dans le graine. On obtenient donc deux spectres diffrentes pour l'experiment à condition liquide et à conditions adaptées aux échantillons solides.  
   \subsection{Condition liquide}
+L'experiment à conditions liquide montre le spectre suivant: 
  \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/graine_liquide.png}
     \caption{graine de salade: condition liquide}
    \end{figurehere}
-
-  \subsection{CP masse}
+Le phase liquide se compose principalement des lipides et peut-être aussi de l'eau. 
+  \subsection{CP/MAS}
+Pour obtenir un bon spectre d'un échantillon solide il faut -comme expliqué plus haut- appliquer quelques conditions speciales. D'abord nous avons appliquer les conditions CP/MAS \c ca veut dire avec la polaristion croisée et la rotation en angle magique. Le séquence de impulsions et le résultat sont donnés ci-dessous.
  \begin{figurehere}
     \center
      \includegraphics[width=0.5\textwidth]{bilder/PDSD1.png}
@@ -175,23 +192,23 @@
  \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/graine_solide.png}
-    \caption{graine de salade: CP masse}
+    \caption{graine de salade: CP/MAS}
    \end{figurehere}
  \begin{figurehere}
-     \begin{minipage}{0.5\textwidth}
+     \begin{minipage}{0.45\textwidth}
       \centering
-     \includegraphics[width=0.5\textwidth]{bilder/graine_sans_rot.png}   
-     \caption{graine de salade: sans rotation en angle magique}   
-     \label{fig:sansrot}  
+     \includegraphics[width=\textwidth]{bilder/graine_sans_rot.png}   
+     \caption{graine de salade: sans rotation en angle magique}    
    \end{minipage}
    \hfill
-   \begin{minipage}[H]{0.5\textwidth}
+   \begin{minipage}[H]{0.45\textwidth}
         \centering
-       	\includegraphics[width=0.5\textwidth]{bilder/graine_sans_decouplage.png}
+       	\includegraphics[width=\textwidth]{bilder/graine_sans_decouplage.png}
         \caption{graine de salade: sans découplage}
    \end{minipage}
     \end{figurehere}
-  \subsection{DEPT ?}
+  \subsection{DEPT }
+Dans l'experiment DEPT on transfer la polarisation des protons 	 liés directement à le carbon dans ce-la. Avec \c ca on peut 	 distinguer entre des carbones avec 1,2,3 ou 4 protons liés directement, c'est-à-dire on va voir les groupes \ce{C-H3}, \ce{C-H2} et \ce{C-H1}. Pour arriver à \c ca, on utilise le sequence suivant, l'aspect le plus important c'est flip angle.
 \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/DEPT.png}
@@ -199,7 +216,7 @@
    \end{figurehere}  
 
   \subsection{2D-Spektrum}
-   wie Dept, aber Entkopplung glaube ich später
+   On peut aussi appliquer cette technique à 2D (la technique 2D sera expliquée ci-dessous), le \ce{C-H1} va faire deux pics, le \ce{C-H2} trois pics, mais versé à le bas, \ce{C-H3} va faire quatre pics.
   \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/dept_2d.png}
@@ -208,22 +225,25 @@
  
 
  \section{Cellulose}
+
   \subsection{Spectre \isotope[13]{C}}
+La première étappe à comprehender la structure de la cellulose, c'est faire un 1D spectre de le carbone. On trouve que le \ce{C1} et le  \ce{C6} sont definis passablement, mais les autres carbones pas.
  \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/c13_spektum.png}
     \caption{spectre du \isotope[13]{C}, les pics en centre ne sont pas defini. On va arriver une mieux definition avec des methodes differentes suivantes}
    \end{figurehere}
-   nicht erkennbar was was ist, am Ende Spektum nochmal zeigen +beschriftet  
 
   \subsection{Spectre H}
-   Wasser peak und Artefakt, bandes rotationelles
+Puis on faire le spectre de l'H. On observe juste un vrai pic qui est une superposition des pics differents de l'H, mais encore des bandes rotationelles aux multiples de la fréquence de la rotation. Le pic très fort, c'est l'eau liquide dans l'echantillon.
+
 \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/proton_spektrum.png}
     \caption{spectre H avec un atefact et un pic d'eau liquide}
    \end{figurehere}
   \subsection{Spin-diffusion}
+Comme montré ci-dessus les 1D spectres ne propose pas toujours une bonne definition des pics. Pour  améliorer la definition tout de même on ajout une autre diménsion. Le deuxieme dimension découle de un temps virtuel $t_1$. Ce temps, c'est le temps qu'on attend aprés le spin transfert entre les protons et carbones. Ceux-là sont decouplés mais le moment magnetique de le carbonne se tourne avec le frequence Lamor. Parce que le detector 	 enregistre seulement la part de le moment magnetique dans une direction particulière l'amplitude de l'aimantation est modulée sinuso\"{\i}dale. Après on laisse des carbones commuter l'aimmation et finalment detect le signal. 	 Au bout du compte il faut faire une deuxieme transformation fourier pour reobtenir le temps $t_1$ qui est codé dans l'amplitude de le signal.
 \begin{figurehere}
     \center
      \includegraphics[width=0.5\textwidth]{bilder/PDSD2.png}
@@ -234,13 +254,16 @@
     \includegraphics[width=0.5\textwidth]{bilder/spin_diff.png}
     \caption{proton driven spin-diffusion: \isotope[13]{C} - \isotope[13]{C} dipolaire couplage experiment}
    \end{figurehere}
+Dans le spectre \isotope{13}{C} en 1D nous avons vu des pics differents de le carbone dans le cellulose. On avait un pic à gauche dont on peut dire c’est le {\ce{C1} et aussi un pic à droit dont on peut dire c’est le {\ce{C6}, mais pour les pics en centre on ne peut pas définir. A cause de cela nous avons fait une mesure en deux dimensions pour identifier les autres pics. Les pics en diagonale sont les vraies C et les petits crosspeaks à côté de la diagonale montrent les interactions avec les C proches à cause de l’interaction dipoliare. Premièrement nous savaient que le premier pic en diagonal chez \unit [105] {ppm} c’est le \ce{C1}} et le dernier pic en diagonal chez \unit[62,5] {ppm} c’est le \ce{C6}. Alors nous avons fait des traits horizontals et verticals en les deux pics pour voir mieux avec quels ils intérdisent et pour chaque C que nous avons trouvé nous avons fait les traits de nouveau. Nous savons qu’il y a un \ce{C6} cristalline et un \ce{C6} surface pour le \ce{C6} et à cause de cela ( wir hatten das doch aus einem Dokument abgelesen) nous pouvons dire que \ce{C6} surface est chez \unit [22,5] {ppm} et le \ce{C6} cristalline est chez \unit [65] {ppm}. A la prochaine on doit voir avec quel le \ce{C6} et le \ce{C1} peuvent intérdire. Pour le \ce{C1} on a 5 crosspeak et on a une très grande crosspeak alors c’est probable l’interaction avec \ce{C5} et \ce{C2} parce qu’ils sont les plus proches. Il faut que ces réfléxions fassent pour chaque pic en diagonal. En plus nous avaient aussi la mesure inadequate et avec ca mesure nous pouvaient dire tour à  tour quels sont les C en diagonal.  
   
   \subsection{Inadequate}
+
 \begin{figurehere}
     \center
      \includegraphics[width=0.5\textwidth]{bilder/PDSD4.png}
      \caption{sequence de réalisation de \isotope[13]{C} - \isotope[13]{C} J-couplage experiment}
     \end{figurehere}
+Chez la mesure inadequate nous n’avons pas l’interaction dipolare mais le J couplage. C’est à dire que les crosspeaks qu’on peut voir sont interactions entre deux C qui on une relation directe. Alors le \ce{C1} a seulement une crosspeak et il a deux relations directes, une relation avec \ce{C2} et une autre relation avec \ce{C5}. Nous avions cette information de la structure de cellulose. A cause de ces informations nous n’étaient pas vraiment sûre si chez la position \unit [74,5] {ppm} c’est \ce{C5} ou \ce{C2}. On sait que le \ce{C6} a seulement une relation directe avec le \ce{C5} alors on peut dire que le \ce{C5} surface est environ \unit [72,1] {ppm} et le \ce{C5} cristalline est environ \unit [74,9] {ppm}. On peut voir que le \ce{C5} cristalline et le \ce{C2} sont très proches alors il es très difficile différencer entre les deux. Nous avons comparé la mesure inadequate avec la mesure spin diffusion et nous avons trouvé les autres C. 
 \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/inad.png}
@@ -248,12 +271,13 @@
    \end{figurehere}
   \subsection{Hetcore}
  
-   abgeschnitten Spinning sidebands, noch da fehler wegen zu kurz gemessen = Signal abgeschnitten
+  \todo{ abgeschnitten Spinning sidebands, noch da fehler wegen zu kurz gemessen = Signal abgeschnitten???}
 \begin{figurehere}
     \center
      \includegraphics[width=0.5\textwidth]{bilder/PDSD3.png}
      \caption{sequence de réalisation de \isotope[1]{H} - \isotope[13]{C} couplage transfert experiment}
     \end{figurehere}
+Maintenant nous savons où sont les différents C. En plus nous voulons savoir où les H sont exactement parce que chez la mesure en 1 dimension nous avons reçu seulement un très large pic pur les H. A cause de çela nous avons fait une mesure avec un couplage \ce{H-C} en 2 dimensions aussi. Nous avons tracé des traits vertical chez les positions des différents pics et aussi des traits horizontals par des pics commons des différents C. On peut dire que le plus grand pic chez la position de \ce{C1} c’est le \ce{H1} et parce qu’il y a aussi deux grands pics chez le \ce{C6} surface et le \ce{C6} cristalline on peut dire c’est le \ce{H6}. Nous pouvaient voir aussi deux différents pics chez le \ce{C4} cristalline et le \ce{C4} surface donc nous pouvons dire c’est le \ce{H4}, mais chez le \ce{C2}, \ce{C3} et le \ce{C5} il y a seulement un grand pic et à cause de çela nous ne pouvaient pas dire exactement où sont le \ce{H2}, \ce{H3} et le \ce{H5}.
  \begin{figurehere}
     \center
     \includegraphics[width=0.5\textwidth]{bilder/hetcor.png}
