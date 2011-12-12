@@ -1,0 +1,13 @@
+reset
+
+set output 'temps.png'
+set terminal png
+
+set yrange[0.5:3]
+set xrange[0:20]
+
+set grid
+set xlabel 'temps[ns]'
+set ylabel 'grandeur [10^6]'
+
+plot  'temps.txt' using 1:2 title 'points de mesure', 'temps.txt' using 1:2 title 'mesure' with lines

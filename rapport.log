@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.5.1)  7 DEC 2011 22:58
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.18)  12 DEC 2011 15:17
 entering extended mode
  %&-line parsing enabled.
-**rapport
+**rapport.tex
 (./rapport.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, french, basque, loaded.
 (/usr/share/texmf-texlive/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2009/07/24 v3.04a KOMA-Script document class (article)
 
@@ -327,12 +327,6 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `French'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@french = a dialect from \language0
 Package babel Info: Making : an active character on input line 120.
 Package babel Info: Making ; an active character on input line 121.
 Package babel Info: Making ! an active character on input line 122.
@@ -341,6 +335,7 @@ Package babel Info: Making ? an active character on input line 123.
 \std@mcc=\count89
 \dec@mcc=\count90
 \parindentFFN=\dimen105
+
 *************************************
 * Local config file frenchb.cfg used
 *
@@ -465,51 +460,72 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
+(/usr/share/texmf-texlive/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2010/06/16 v3.08 for typesetting chemical formulae
 
-! LaTeX Error: File `mhchem.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-
-! LaTeX Error: Unknown option `version=3' for package `mhchem'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 \RequirePackage
-                     {xspace}
-? 
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count105
+\calc@Bcount=\count106
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count107
+\calc@Cskip=\skip52
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/twoopt.sty
+Package: twoopt 2008/08/11 v1.5 Definitions with two optional arguments (HO)
+)
+\tok@mhchem@ce@iii=\toks24
+\mhchem@arrowminlength=\skip53
+\mhchem@arrows@box=\box31
+\mhchem@arrowlength@pgf=\skip54
+\mhchem@arrowminlength@pgf=\skip55
+\mhchem@bondwidth=\skip56
+\mhchem@bondheight=\skip57
+\mhchem@smallbondwidth@tmpA=\skip58
+\mhchem@smallbondwidth@tmpB=\skip59
+\mhchem@smallbondwidth=\skip60
+\mhchem@cf@element=\toks25
+\mhchem@cf@number=\toks26
+\mhchem@cf@sup=\toks27
+\tok@mhchem@cf@i=\toks28
+\c@mhchem@cf@length=\count108
+\mhchem@cf@replaceminus@tok=\toks29
+\mhchem@option@minussidebearingleft=\skip61
+\mhchem@option@minussidebearingright=\skip62
+)
 (/usr/share/texmf-texlive/tex/latex/tools/xspace.sty
 Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
 )
 (/usr/share/texmf-texlive/tex/latex/units/units.sty
 Package: units 1998/08/04 v0.9b Typesetting units
 
-(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
 (/usr/share/texmf-texlive/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip50
-\L@UnitsRaiseTextstyle=\skip51
-\L@UnitsRaiseScriptstyle=\skip52
+\L@UnitsRaiseDisplaystyle=\skip63
+\L@UnitsRaiseTextstyle=\skip64
+\L@UnitsRaiseScriptstyle=\skip65
 ))
 (/usr/share/texmf-texlive/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
 (/usr/share/texmf-texlive/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen117
-\extrarowheight=\dimen118
-\NC@list=\toks24
-\extratabsurround=\skip53
-\backup@length=\skip54
+\col@sep=\dimen119
+\extrarowheight=\dimen120
+\NC@list=\toks30
+\extratabsurround=\skip66
+\backup@length=\skip67
 )
 (/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen119
+\bigstrutjot=\dimen121
 )
 (/usr/share/texmf-texlive/tex/latex/ushort/ushort.sty
 ushort.sty by M. Vaeth: Release: 2.2 
@@ -517,17 +533,272 @@ Package: ushort 2001/06/13 v2.2
 ) (/usr/share/texmf-texlive/tex/latex/ltxmisc/relsize.sty
 Package: relsize 2003/07/04 ver 3.1
 )
+(/usr/share/texmf-texlive/tex/latex/fourier/fourier.sty
+Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
+Now handling font encoding FML ...
+... no UTF-8 mapping file for font encoding FML
+Now handling font encoding FMS ...
+... no UTF-8 mapping file for font encoding FMS
+Now handling font encoding FMX ...
+... no UTF-8 mapping file for font encoding FMX
 
-! LaTeX Error: File `fourier.sty' not found.
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texmf-texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-Enter file name: 
-\symcalletters=\mathgroup4
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
 
-Package vanadin Warning: Venturis Fonts not installed. I will use Poor Mans Fou
-rier SmallCaps instead.
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf-texlive/tex/latex/fourier/fourier-orns.sty
+Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 50.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> T1/futs/m/n on input line 50.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 50.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/m/n on input line 50.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 51.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 59.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 59.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> FML/futmi/m/it on input line 59.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 59.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> FML/futmi/m/it on input line 59.
+\symotherletters=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 61.
+LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
+(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 69.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 73.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 113.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 113.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> FMS/futm/m/n on input line 113.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 113.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> FMS/futm/m/n on input line 113.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 114.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+14.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 114.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 114
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 114.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 115.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 115.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 115.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 116.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 117.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/futs/m/it on input line 117.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/futs/m/it on input line 117.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 118.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 134.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 187.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 210.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 215.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 217.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 219.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 221.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 223.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 225.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 227.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 229.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 231.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 233.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 235.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 237.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 239.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 241.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 243.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 247.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 248.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 249.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 250.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 251.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 252.
+LaTeX Font Info:    Redeclaring math accent \check on input line 253.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
+\symUfutm=\mathgroup5
+)
+\symcalletters=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 162.
+
+
+Package vanadin Warning: Using Quick and dirty hack to replace fake Fourier Sma
+llCaps with ways nicer Venturis ones.
 
 (/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
 Package: geometry 2008/12/21 v4.2 Page Geometry
@@ -540,38 +811,38 @@ Package ifpdf Info: pdfTeX in pdf mode detected.
 Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count105
-\Gm@cntv=\count106
-\c@Gm@tempcnt=\count107
-\Gm@bindingoffset=\dimen120
-\Gm@wd@mp=\dimen121
-\Gm@odd@mp=\dimen122
-\Gm@even@mp=\dimen123
-\Gm@dimlist=\toks25
-)
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
+\Gm@bindingoffset=\dimen122
+\Gm@wd@mp=\dimen123
+\Gm@odd@mp=\dimen124
+\Gm@even@mp=\dimen125
+\Gm@dimlist=\toks31
+
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
 (/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
 Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
-\c@tracingmulticols=\count108
-\mult@box=\box31
-\multicol@leftmargin=\dimen124
-\c@unbalance=\count109
-\c@collectmore=\count110
-\doublecol@number=\count111
-\multicoltolerance=\count112
-\multicolpretolerance=\count113
-\full@width=\dimen125
-\page@free=\dimen126
-\premulticols=\dimen127
-\postmulticols=\dimen128
-\multicolsep=\skip55
-\multicolbaselineskip=\skip56
-\partial@page=\box32
-\last@line=\box33
-\mult@rightbox=\box34
-\mult@grightbox=\box35
-\mult@gfirstbox=\box36
-\mult@firstbox=\box37
-\@tempa=\box38
+\c@tracingmulticols=\count112
+\mult@box=\box32
+\multicol@leftmargin=\dimen126
+\c@unbalance=\count113
+\c@collectmore=\count114
+\doublecol@number=\count115
+\multicoltolerance=\count116
+\multicolpretolerance=\count117
+\full@width=\dimen127
+\page@free=\dimen128
+\premulticols=\dimen129
+\postmulticols=\dimen130
+\multicolsep=\skip68
+\multicolbaselineskip=\skip69
+\partial@page=\box33
+\last@line=\box34
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
 \@tempa=\box39
 \@tempa=\box40
 \@tempa=\box41
@@ -588,13 +859,14 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \@tempa=\box52
 \@tempa=\box53
 \@tempa=\box54
-\c@columnbadness=\count114
-\c@finalcolumnbadness=\count115
-\last@try=\dimen129
-\multicolovershoot=\dimen130
-\multicolundershoot=\dimen131
-\mult@nat@firstbox=\box55
-\colbreak@box=\box56
+\@tempa=\box55
+\c@columnbadness=\count118
+\c@finalcolumnbadness=\count119
+\last@try=\dimen131
+\multicolovershoot=\dimen132
+\multicolundershoot=\dimen133
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
 )
 (/usr/share/texmf-texlive/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
@@ -630,9 +902,9 @@ O)
 (/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
 Package: xcolor-patch 2009/10/02 xcolor patch
 ))
-\@linkdim=\dimen132
-\Hy@linkcounter=\count116
-\Hy@pagecounter=\count117
+\@linkdim=\dimen134
+\Hy@linkcounter=\count120
+\Hy@pagecounter=\count121
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
@@ -699,10 +971,10 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 )))
-\Fld@menulength=\count118
-\Field@Width=\dimen133
-\Fld@charsize=\dimen134
-\Field@toks=\toks26
+\Fld@menulength=\count122
+\Field@Width=\dimen135
+\Fld@charsize=\dimen136
+\Field@toks=\toks32
 Package hyperref Info: Hyper figures OFF on input line 4377.
 Package hyperref Info: Link nesting OFF on input line 4382.
 Package hyperref Info: Hyper index ON on input line 4385.
@@ -714,14 +986,14 @@ Package hyperref Info: PDF/A mode OFF on input line 4407.
 (/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 )
-\Hy@abspage=\count119
-\c@Item=\count120
-\c@Hfootnote=\count121
+\Hy@abspage=\count123
+\c@Item=\count124
+\c@Hfootnote=\count125
 )
 *hyperref using default driver hpdftex*
 (/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
-\Fld@listcount=\count122
+\Fld@listcount=\count126
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 209.
 Package hyperref Info: Option `breaklinks' set `true' on input line 209.
@@ -732,12 +1004,12 @@ File: puenc.def 2009/10/09 v6.79a Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-(/usr/share/texmf-texlive/tex/latex/gnuplottex/gnuplottex.sty
-Package: gnuplottex 2007/10/13 v0.4.2 gnuplot graphs in LaTeX
+(/usr/share/texmf/tex/latex/gnuplottex.sty
+Package: gnuplottex 2011/04/16 v0.4.3 gnuplot graphs in LaTeX
 
 (/usr/share/texmf-texlive/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup5
+\symlasy=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
@@ -746,34 +1018,34 @@ Package: moreverb 2008/06/03 v2.3 `more' verbatim facilities
 
 (/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks27
-\verbatim@line=\toks28
+\every@verbatim=\toks33
+\verbatim@line=\toks34
 \verbatim@in@stream=\read1
 )
 \verbatim@out=\write3
-\tab@position=\count123
-\tab@size=\count124
-\listing@line=\count125
+\tab@position=\count127
+\tab@size=\count128
+\listing@line=\count129
 )
-runsystem(touch /tmp/w18-test-20111271378)...disabled.
+runsystem(touch /tmp/w18-test-20111212917)...disabled.
 
-runsystem(rm -f /tmp/w18-test-20111271378)...disabled.
+runsystem(rm -f /tmp/w18-test-20111212917)...disabled.
 
 
 
 Package gnuplottex Warning: Shell escape not enabled.
 (gnuplottex)                You'll need to convert the graphs yourself..
 
-\c@fignum=\count126
+\c@fignum=\count130
 ) (/usr/share/texmf-texlive/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box57
+\@eurobox=\box58
 )
 (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks29
+\pgfutil@everybye=\toks35
 )
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def)
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
@@ -787,21 +1059,21 @@ Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
 Package: pgfsys 2008/02/07 v2.00 (rcs-revision 1.31)
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
 )
-\pgf@x=\dimen135
-\pgf@y=\dimen136
-\pgf@xa=\dimen137
-\pgf@ya=\dimen138
-\pgf@xb=\dimen139
-\pgf@yb=\dimen140
-\pgf@xc=\dimen141
-\pgf@yc=\dimen142
-\c@pgf@counta=\count127
-\c@pgf@countb=\count128
-\c@pgf@countc=\count129
-\c@pgf@countd=\count130
+\pgf@x=\dimen137
+\pgf@y=\dimen138
+\pgf@xa=\dimen139
+\pgf@ya=\dimen140
+\pgf@xb=\dimen141
+\pgf@yb=\dimen142
+\pgf@xc=\dimen143
+\pgf@yc=\dimen144
+\c@pgf@counta=\count131
+\c@pgf@countb=\count132
+\c@pgf@countc=\count133
+\c@pgf@countd=\count134
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/01/13  (rcs-revision 1.6)
@@ -816,8 +1088,8 @@ File: pgfsys-common-pdf.def 2007/12/17  (rcs-revision 1.8)
 )))
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/01/23  (rcs-revision 1.6)
-\pgfsyssoftpath@smallbuffer@items=\count131
-\pgfsyssoftpath@bigbuffer@items=\count132
+\pgfsyssoftpath@smallbuffer@items=\count135
+\pgfsyssoftpath@bigbuffer@items=\count136
 )
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -828,14 +1100,14 @@ Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex
-\pgfmath@box=\box58
+\pgfmath@box=\box59
 )
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@stack=\toks32
-\c@pgfmath@parsecounta=\count133
-\c@pgfmath@parsecountb=\count134
-\c@pgfmath@parsecountc=\count135
-\pgfmath@parsex=\dimen143
+\pgfmath@stack=\toks38
+\c@pgfmath@parsecounta=\count137
+\c@pgfmath@parsecountb=\count138
+\c@pgfmath@parsecountc=\count139
+\pgfmath@parsex=\dimen145
 )
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathoperations.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathtrig.code.tex)
@@ -843,47 +1115,47 @@ Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathbase.code.tex)))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2008/02/03  (rcs-revision 1.13)
-\pgf@picminx=\dimen144
-\pgf@picmaxx=\dimen145
-\pgf@picminy=\dimen146
-\pgf@picmaxy=\dimen147
-\pgf@pathminx=\dimen148
-\pgf@pathmaxx=\dimen149
-\pgf@pathminy=\dimen150
-\pgf@pathmaxy=\dimen151
-\pgf@xx=\dimen152
-\pgf@xy=\dimen153
-\pgf@yx=\dimen154
-\pgf@yy=\dimen155
-\pgf@zx=\dimen156
-\pgf@zy=\dimen157
+\pgf@picminx=\dimen146
+\pgf@picmaxx=\dimen147
+\pgf@picminy=\dimen148
+\pgf@picmaxy=\dimen149
+\pgf@pathminx=\dimen150
+\pgf@pathmaxx=\dimen151
+\pgf@pathminy=\dimen152
+\pgf@pathmaxy=\dimen153
+\pgf@xx=\dimen154
+\pgf@xy=\dimen155
+\pgf@yx=\dimen156
+\pgf@yy=\dimen157
+\pgf@zx=\dimen158
+\pgf@zy=\dimen159
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2008/02/13  (rcs-revision 1.14)
-\pgf@path@lastx=\dimen158
-\pgf@path@lasty=\dimen159
+\pgf@path@lastx=\dimen160
+\pgf@path@lasty=\dimen161
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/01/23  (rcs-revision 1.11)
-\pgf@shorten@end@additional=\dimen160
-\pgf@shorten@start@additional=\dimen161
+\pgf@shorten@end@additional=\dimen162
+\pgf@shorten@start@additional=\dimen163
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2008/01/15  (rcs-revision 1.26)
-\pgfpic=\box59
-\pgf@hbox=\box60
-\pgf@layerbox@main=\box61
-\pgf@picture@serial@count=\count136
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count140
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2007/12/12  (rcs-revision 1.8)
-\pgflinewidth=\dimen162
+\pgflinewidth=\dimen164
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2008/02/04  (rcs-revision 1.10)
-\pgf@pt@x=\dimen163
-\pgf@pt@y=\dimen164
-\pgf@pt@temp=\dimen165
+\pgf@pt@x=\dimen165
+\pgf@pt@y=\dimen166
+\pgf@pt@temp=\dimen167
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
@@ -899,12 +1171,12 @@ File: pgfcorearrows.code.tex 2007/06/07  (rcs-revision 1.8)
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2007/12/10  (rcs-revision 1.9)
-\pgf@max=\dimen166
-\pgf@sys@shading@range@num=\count137
+\pgf@max=\dimen168
+\pgf@sys@shading@range@num=\count141
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2008/01/15  (rcs-revision 1.1)
-\pgfexternal@startupbox=\box62
+\pgfexternal@startupbox=\box63
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2008/01/15  (rcs-revision 1.1)
@@ -917,8 +1189,8 @@ File: pgfcorepatterns.code.tex 2008/01/15  (rcs-revision 1.1)
 )))
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
-\pgfnodeparttextbox=\box63
-\toks@savedmacro=\toks33
+\pgfnodeparttextbox=\box64
+\toks@savedmacro=\toks39
 )
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
@@ -926,8 +1198,8 @@ File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen167
-\pgf@nodesepend=\dimen168
+\pgf@nodesepstart=\dimen169
+\pgf@nodesepend=\dimen170
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
@@ -935,37 +1207,37 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
 (/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
-\pgffor@iter=\dimen169
-\pgffor@skip=\dimen170
+\pgffor@iter=\dimen171
+\pgffor@skip=\dimen172
 ))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
-\pgf@plot@mark@count=\count138
-\pgfplotmarksize=\dimen171
+\pgf@plot@mark@count=\count142
+\pgfplotmarksize=\dimen173
 )
-\tikz@lastx=\dimen172
-\tikz@lasty=\dimen173
-\tikz@lastxsaved=\dimen174
-\tikz@lastysaved=\dimen175
-\tikzleveldistance=\dimen176
-\tikzsiblingdistance=\dimen177
-\tikz@figbox=\box64
-\tikz@tempbox=\box65
-\tikztreelevel=\count139
-\tikznumberofchildren=\count140
-\tikznumberofcurrentchild=\count141
-\tikz@fig@count=\count142
+\tikz@lastx=\dimen174
+\tikz@lasty=\dimen175
+\tikz@lastxsaved=\dimen176
+\tikz@lastysaved=\dimen177
+\tikzleveldistance=\dimen178
+\tikzsiblingdistance=\dimen179
+\tikz@figbox=\box65
+\tikz@tempbox=\box66
+\tikztreelevel=\count143
+\tikznumberofchildren=\count144
+\tikznumberofcurrentchild=\count145
+\tikz@fig@count=\count146
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
-\pgfmatrixcurrentrow=\count143
-\pgfmatrixcurrentcolumn=\count144
-\pgf@matrix@numberofcolumns=\count145
+\pgfmatrixcurrentrow=\count147
+\pgfmatrixcurrentcolumn=\count148
+\pgf@matrix@numberofcolumns=\count149
 )
-\tikz@expandcount=\count146
+\tikz@expandcount=\count150
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
@@ -985,10 +1257,46 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 21.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 21.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmlfutm.fd
+File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 21.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmsfutm.fd
+File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 21.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmxfutm.fd
+File: fmxfutm.fd futm-extension
+)
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 21.
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 21.
+
+(/usr/share/texmf-texlive/tex/latex/fourier/t1futs.fd
+File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
+)
 LaTeX Info: Redefining \degres on input line 21.
 
 
@@ -998,30 +1306,30 @@ Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
 
 LaTeX Info: Redefining \dots on input line 21.
 LaTeX Info: Redefining \up on input line 21.
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count147
-\scratchdimen=\dimen178
-\scratchbox=\box66
-\nofMPsegments=\count148
-\nofMParguments=\count149
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count150
-\MPscratchDim=\dimen179
-\MPnumerator=\count151
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count151
+\scratchdimen=\dimen180
+\scratchbox=\box67
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen181
+\MPnumerator=\count155
+\everyMPtoPDFconversion=\toks41
 )
+\symgns@font=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/futs/m/n --> TS1/futs/bx/n on input line 21.
+Package gensymb Info: Math companion symbols declared on input line 21.
+LaTeX Info: Redefining \degree on input line 21.
 LaTeX Info: Redefining \celsius on input line 21.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 21.
-
-
-
-Package gensymb Warning: Not defining \perthousand.
-
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 21.
 LaTeX Info: Redefining \ohm on input line 21.
-Package gensymb Info: Using \Omega for \ohm on input line 21.
-
-Package gensymb Warning: Not defining \micro.
+Package gensymb Info: Using \textohm for \ohm on input line 21.
+Package gensymb Info: Using \textmu for \micro on input line 21.
 
 *geometry auto-detecting driver*
 *geometry detected driver: pdftex*
@@ -1071,7 +1379,7 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count152
+\c@section@level=\count156
 )
 LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
@@ -1080,14 +1388,38 @@ LaTeX Info: Redefining \pageref on input line 21.
 \@outlinefile=\write5
 \openout5 = `rapport.out'.
 
-\AtBeginShipoutBox=\box67
-LaTeX Font Info:    Try loading font information for U+lasy on input line 31.
- (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
+\AtBeginShipoutBox=\box68
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 33
+.
+ (/usr/share/texmf-texlive/tex/latex/fourier/fmlfutmi.fd
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 22.88956pt on input line 33.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 15.89755pt on input line 33.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 33.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 22.88956pt on input line 33.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 15.89755pt on input line 33.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 33.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 33.
+
+(/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 33.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 51.
+{/home/sabine/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 53.
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1095,6 +1427,14 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
 (scrartcl)            on input line 2.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 3.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 3.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 3.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 3.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
 (scrartcl)            on input line 10.
@@ -1103,398 +1443,192 @@ Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)            on input line 18.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 24.
+(scrartcl)            on input line 28.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 29.
+(scrartcl)            on input line 34.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 35.
+(scrartcl)            on input line 40.
 )
 \tf@toc=\write6
 \openout6 = `rapport.toc'.
 
- [2] [3]
-Overfull \hbox (109.1005pt too wide) in alignment at lines 89--92
- [][][] []
- []
-
-[4] <bilder/schema_pol.png, id=200, 351.2322pt x 213.1965pt>
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 61.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 61.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 61.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 61.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 61.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 61.
+ [2] [3] [4]
+<bilder/schema_pol.png, id=200, 351.2322pt x 213.1965pt>
 File: bilder/schema_pol.png Graphic file (type png)
 
-<use bilder/schema_pol.png> [5 <./bilder/schema_pol.png (PNG copy)>] [6]
-<bilder/rotation.png, id=211, 845.559pt x 596.9502pt>
+<use bilder/schema_pol.png> [5] [6 <./bilder/schema_pol.png (PNG copy)>]
+[7] <bilder/rotation.png, id=216, 845.559pt x 596.9502pt>
 File: bilder/rotation.png Graphic file (type png)
 
 <use bilder/rotation.png>
-<bilder/rotation2.png, id=212, 845.559pt x 596.9502pt>
+<bilder/rotation2.png, id=217, 845.559pt x 596.9502pt>
 File: bilder/rotation2.png Graphic file (type png)
 
-<use bilder/rotation2.png> [7]
-Overfull \vbox (30.21211pt too high) has occurred while \output is active []
+<use bilder/rotation2.png>
+
+LaTeX Warning: Float too large for page by 30.21211pt on input line 156.
+
+[8] [9 <./bilder/rotation.png (PNG copy)> <./bilder/rotation2.png (PNG copy)>]
+<plot/temps.png, id=231, 642.4pt x 481.8pt>
+File: plot/temps.png Graphic file (type png)
+ <use plot/temps.png>
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 172.
 
 
-[8 <./bilder/rotation.png (PNG copy)> <./bilder/rotation2.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 150.
+LaTeX Warning: Reference `tatmps' on page 10 undefined on input line 172.
 
+<bilder/figure3.png, id=233, 845.559pt x 596.9502pt>
+File: bilder/figure3.png Graphic file (type png)
+ <use bilder/figure3.png>
+<bilder/figure4.png, id=234, 845.559pt x 596.9502pt>
+File: bilder/figure4.png Graphic file (type png)
+ <use bilder/figure4.png>
+
+LaTeX Warning: Float too large for page by 30.21211pt on input line 181.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 183.
 
 (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<bilder/figure3.png, id=225, 845.559pt x 596.9502pt>
-File: bilder/figure3.png Graphic file (type png)
- <use bilder/figure3.png>
-<bilder/figure4.png, id=226, 845.559pt x 596.9502pt>
-File: bilder/figure4.png Graphic file (type png)
- <use bilder/figure4.png>
-[9]
-Overfull \vbox (30.21211pt too high) has occurred while \output is active []
-
-
-[10 <./bilder/figure3.png (PNG copy)> <./bilder/figure4.png (PNG copy)>]
-<bilder/figure5.png, id=240, 845.559pt x 596.9502pt>
+<bilder/figure5.png, id=235, 845.559pt x 596.9502pt>
 File: bilder/figure5.png Graphic file (type png)
  <use bilder/figure5.png>
-<bilder/figure6.png, id=241, 845.559pt x 596.9502pt>
+<bilder/figure6.png, id=236, 845.559pt x 596.9502pt>
 File: bilder/figure6.png Graphic file (type png)
  <use bilder/figure6.png>
-<bilder/figure7.png, id=242, 841.2228pt x 296.307pt>
+[10 <./plot/temps.png (PNG copy)>] [11 <./bilder/figure3.png (PNG copy)> <./bil
+der/figure4.png (PNG copy)>]
+<bilder/figure7.png, id=253, 841.2228pt x 296.307pt>
 File: bilder/figure7.png Graphic file (type png)
  <use bilder/figure7.png>
-[11 <./bilder/figure5.png (PNG copy)>] [12 <./bilder/figure6.png (PNG copy)> <.
+[12 <./bilder/figure5.png (PNG copy)>] [13 <./bilder/figure6.png (PNG copy)> <.
 /bilder/figure7.png (PNG copy)>]
-<bilder/graine_liquide.png, id=252, 401.8212pt x 289.8027pt>
+<bilder/graine_liquide.png, id=265, 401.8212pt x 289.8027pt>
 File: bilder/graine_liquide.png Graphic file (type png)
 
 <use bilder/graine_liquide.png>
-<bilder/PDSD1.png, id=253, 372.39125pt x 188.705pt>
+<bilder/PDSD1.png, id=266, 372.39125pt x 188.705pt>
 File: bilder/PDSD1.png Graphic file (type png)
  <use bilder/PDSD1.png>
-<bilder/graine_solide.png, id=254, 398.9304pt x 289.08pt>
+[14 <./bilder/graine_liquide.png (PNG copy)> <./bilder/PDSD1.png (PNG copy)>]
+<bilder/graine_solide.png, id=272, 398.9304pt x 289.08pt>
 File: bilder/graine_solide.png Graphic file (type png)
 
-<use bilder/graine_solide.png> [13 <./bilder/graine_liquide.png (PNG copy)> <./
-bilder/PDSD1.png (PNG copy)>]
-<bilder/graine_sans_rot.png, id=262, 398.2077pt x 290.5254pt>
+<use bilder/graine_solide.png>
+<bilder/graine_sans_rot.png, id=273, 398.2077pt x 290.5254pt>
 File: bilder/graine_sans_rot.png Graphic file (type png)
 
 <use bilder/graine_sans_rot.png>
-<bilder/graine_sans_decouplage.png, id=263, 398.9304pt x 288.3573pt>
+<bilder/graine_sans_decouplage.png, id=274, 398.9304pt x 288.3573pt>
 File: bilder/graine_sans_decouplage.png Graphic file (type png)
 
 <use bilder/graine_sans_decouplage.png>
-! Undefined control sequence.
-l.211 ... c'est-à-dire on va voir les groupes \ce
-                                                  {C-H3}, \ce{C-H2} et \ce{C...
+Underfull \hbox (badness 1137) in paragraph at lines 230--230
+[][]\T1/futs/m/n/12 Graines de sa-lade : sans
+ []
 
-? 
-! Undefined control sequence.
-l.211 ...ire on va voir les groupes \ce{C-H3}, \ce
-                                                  {C-H2} et \ce{C-H1}. Pour ...
-
-? 
-! Undefined control sequence.
-l.211 ...r les groupes \ce{C-H3}, \ce{C-H2} et \ce
-                                                  {C-H1}. Pour arriver à \c...
-
-? 
-<bilder/DEPT.png, id=264, 372.39125pt x 188.705pt>
+<bilder/DEPT.png, id=275, 372.39125pt x 188.705pt>
 File: bilder/DEPT.png Graphic file (type png)
  <use bilder/DEPT.png>
-[14 <./bilder/graine_solide.png (PNG copy)> <./bilder/graine_sans_rot.png (PNG 
-copy)> <./bilder/graine_sans_decouplage.png (PNG copy)> <./bilder/DEPT.png>]
-! Undefined control sequence.
-l.219 ...ue 2D sera expliquée ci-dessous), le \ce
-                                                  {C-H1} va faire deux pics,...
-
-? 
-! Undefined control sequence.
-l.219 ..., le \ce{C-H1} va faire deux pics, le \ce
-                                                  {C-H2} trois pics, mais ve...
-
-? 
-! Undefined control sequence.
-l.219 ...2} trois pics, mais versé à le bas, \ce
-                                                  {C-H3} va faire quatre pics.
-? 
-<bilder/dept_2d.png, id=274, 724.1454pt x 524.6802pt>
+[15 <./bilder/graine_solide.png (PNG copy)> <./bilder/graine_sans_rot.png (PNG 
+copy)> <./bilder/graine_sans_decouplage.png (PNG copy)>]
+<bilder/dept_2d.png, id=285, 724.1454pt x 524.6802pt>
 File: bilder/dept_2d.png Graphic file (type png)
  <use bilder/dept_2d.png>
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 256.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 256.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 256.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 256.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\isotope' on input line 229.
+(hyperref)                removing `\isotope' on input line 256.
 
-! Undefined control sequence.
-l.230 ...ectre de le carbone. On trouve que le \ce
-                                                  {C1} et le  \ce{C6} sont d...
-
-? 
-! Undefined control sequence.
-l.230 ...bone. On trouve que le \ce{C1} et le  \ce
-                                                  {C6} sont definis passable...
-
-? 
-<bilder/c13_spektum.png, id=275, 747.9945pt x 513.8397pt>
+[16 <./bilder/DEPT.png> <./bilder/dept_2d.png (PNG copy)>]
+<bilder/c13_spektum.png, id=293, 747.9945pt x 513.8397pt>
 File: bilder/c13_spektum.png Graphic file (type png)
 
-<use bilder/c13_spektum.png> [15 <./bilder/dept_2d.png (PNG copy)> <./bilder/c1
-3_spektum.png (PNG copy)>]
-<bilder/proton_spektrum.png, id=283, 747.9945pt x 546.3612pt>
+<use bilder/c13_spektum.png>
+<bilder/proton_spektrum.png, id=294, 747.9945pt x 546.3612pt>
 File: bilder/proton_spektrum.png Graphic file (type png)
 
-<use bilder/proton_spektrum.png>
-<bilder/PDSD2.png, id=284, 372.39125pt x 188.705pt>
+<use bilder/proton_spektrum.png> [17 <./bilder/c13_spektum.png (PNG copy)> <./b
+ilder/proton_spektrum.png (PNG copy)>]
+<bilder/PDSD2.png, id=301, 372.39125pt x 188.705pt>
 File: bilder/PDSD2.png Graphic file (type png)
  <use bilder/PDSD2.png>
-[16 <./bilder/proton_spektrum.png (PNG copy)>]
-<bilder/spin_diff.png, id=291, 845.559pt x 596.9502pt>
+<bilder/spin_diff.png, id=302, 845.559pt x 596.9502pt>
 File: bilder/spin_diff.png Graphic file (type png)
 
-<use bilder/spin_diff.png>
-! Undefined control sequence.
-l.257 ... gauche dont on peut dire c’est le {\ce
-                                                  {C1} et aussi un pic à dr...
-
-? 
-! Undefined control sequence.
-l.257 ...� droit dont on peut dire c’est le {\ce
-                                                  {C6}, mais pour les pics e...
-
-? 
-! Undefined control sequence.
-l.257 ...nal chez \unit [105] {ppm} c’est le \ce
-                                                  {C1}} et le dernier pic en...
-
-? 
-! Undefined control sequence.
-l.257 ...nal chez \unit[62,5] {ppm} c’est le \ce
-                                                  {C6}. Alors nous avons fai...
-
-? 
-! Undefined control sequence.
-l.257 ...e nouveau. Nous savons qu’il y a un \ce
-                                                  {C6} cristalline et un \ce...
-
-? 
-! Undefined control sequence.
-l.257 ...��il y a un \ce{C6} cristalline et un \ce
-                                                  {C6} surface pour le \ce{C...
-
-? 
-! Undefined control sequence.
-l.257 ...talline et un \ce{C6} surface pour le \ce
-                                                  {C6} et à cause de cela (...
-
-? 
-! Undefined control sequence.
-l.257 ...ment abgelesen) nous pouvons dire que \ce
-                                                  {C6} surface est chez \uni...
-
-? 
-! Undefined control sequence.
-l.257 ...ace est chez \unit [22,5] {ppm} et le \ce
-                                                  {C6} cristalline est chez ...
-
-? 
-! Undefined control sequence.
-l.257 ...a prochaine on doit voir avec quel le \ce
-                                                  {C6} et le \ce{C1} peuvent...
-
-? 
-! Undefined control sequence.
-l.257 ... doit voir avec quel le \ce{C6} et le \ce
-                                                  {C1} peuvent intérdire. P...
-
-? 
-! Undefined control sequence.
-l.257 ...e \ce{C1} peuvent intérdire. Pour le \ce
-                                                  {C1} on a 5 crosspeak et o...
-
-? 
-! Undefined control sequence.
-l.257 ...c’est probable l’interaction avec \ce
-                                                  {C5} et \ce{C2} parce qu�...
-
-? 
-! Undefined control sequence.
-l.257 ...bable l’interaction avec \ce{C5} et \ce
-                                                  {C2} parce qu’ils sont l...
-
-? 
-[17 <./bilder/PDSD2.png> <./bilder/spin_diff.png (PNG copy)>]
-<bilder/PDSD4.png, id=299, 372.39125pt x 188.705pt>
+<use bilder/spin_diff.png> [18 <./bilder/PDSD2.png> <./bilder/spin_diff.png (PN
+G copy)>] <bilder/PDSD4.png, id=312, 372.39125pt x 188.705pt>
 File: bilder/PDSD4.png Graphic file (type png)
- <use bilder/PDSD4.png>
-! Undefined control sequence.
-l.266 ...qui on une relation directe. Alors le \ce
-                                                  {C1} a seulement une cross...
 
-? 
-! Undefined control sequence.
-l.266 ...relations directes, une relation avec \ce
-                                                  {C2} et une autre relation...
-
-? 
-! Undefined control sequence.
-l.266 ...ec \ce{C2} et une autre relation avec \ce
-                                                  {C5}. Nous avions cette in...
-
-? 
-! Undefined control sequence.
-l.266 ...a position \unit [74,5] {ppm} c’est \ce
-                                                  {C5} ou \ce{C2}. On sait q...
-
-? 
-! Undefined control sequence.
-l.266 ...\unit [74,5] {ppm} c’est \ce{C5} ou \ce
-                                                  {C2}. On sait que le \ce{C...
-
-? 
-! Undefined control sequence.
-l.266 ...st \ce{C5} ou \ce{C2}. On sait que le \ce
-                                                  {C6} a seulement une relat...
-
-? 
-! Undefined control sequence.
-l.266 ...eulement une relation directe avec le \ce
-                                                  {C5} alors on peut dire qu...
-
-? 
-! Undefined control sequence.
-l.266 ... le \ce{C5} alors on peut dire que le \ce
-                                                  {C5} surface est environ \...
-
-? 
-! Undefined control sequence.
-l.266 ... est environ \unit [72,1] {ppm} et le \ce
-                                                  {C5} cristalline est envir...
-
-? 
-! Undefined control sequence.
-l.266 ...nit [74,9] {ppm}. On peut voir que le \ce
-                                                  {C5} cristalline et le \ce...
-
-? 
-! Undefined control sequence.
-l.266 ...voir que le \ce{C5} cristalline et le \ce
-                                                  {C2} sont très proches al...
-
-? 
-<bilder/inad.png, id=300, 845.559pt x 596.9502pt>
+<use bilder/PDSD4.png> <bilder/inad.png, id=314, 845.559pt x 596.9502pt>
 File: bilder/inad.png Graphic file (type png)
- <use bilder/inad.png>
-[18 <./bilder/PDSD4.png> <./bilder/inad.png (PNG copy)>]
-<bilder/PDSD3.png, id=308, 372.39125pt x 188.705pt>
+
+<use bilder/inad.png> [19 <./bilder/PDSD4.png>]
+<bilder/PDSD3.png, id=323, 372.39125pt x 188.705pt>
 File: bilder/PDSD3.png Graphic file (type png)
  <use bilder/PDSD3.png>
-! Undefined control sequence.
-l.280 ...vons fait une mesure avec un couplage \ce
-                                                  {H-C} en 2 dimensions auss...
-
-? 
-! Undefined control sequence.
-l.280 ...le plus grand pic chez la position de \ce
-                                                  {C1} c’est le \ce{H1} et...
-
-? 
-! Undefined control sequence.
-l.280 ...hez la position de \ce{C1} c’est le \ce
-                                                  {H1} et parce qu’il y a ...
-
-? 
-! Undefined control sequence.
-l.280 ...il y a aussi deux grands pics chez le \ce
-                                                  {C6} surface et le \ce{C6}...
-
-? 
-! Undefined control sequence.
-l.280 ...ds pics chez le \ce{C6} surface et le \ce
-                                                  {C6} cristalline on peut d...
-
-? 
-! Undefined control sequence.
-l.280 ...} cristalline on peut dire c’est le \ce
-                                                  {H6}. Nous pouvaient voir ...
-
-? 
-! Undefined control sequence.
-l.280 ...r aussi deux différents pics chez le \ce
-                                                  {C4} cristalline et le \ce...
-
-? 
-! Undefined control sequence.
-l.280 ...ics chez le \ce{C4} cristalline et le \ce
-                                                  {C4} surface donc nous pou...
-
-? 
-! Undefined control sequence.
-l.280 ...ace donc nous pouvons dire c’est le \ce
-                                                  {H4}, mais chez le \ce{C2}...
-
-? 
-! Undefined control sequence.
-l.280 ...dire c’est le \ce{H4}, mais chez le \ce
-                                                  {C2}, \ce{C3} et le \ce{C5...
-
-? 
-! Undefined control sequence.
-l.280 ...est le \ce{H4}, mais chez le \ce{C2}, \ce
-                                                  {C3} et le \ce{C5} il y a ...
-
-? 
-! Undefined control sequence.
-l.280 ..., mais chez le \ce{C2}, \ce{C3} et le \ce
-                                                  {C5} il y a seulement un g...
-
-? 
-! Undefined control sequence.
-l.280 ...aient pas dire exactement où sont le \ce
-                                                  {H2}, \ce{H3} et le \ce{H5}.
-? 
-! Undefined control sequence.
-l.280 ... dire exactement où sont le \ce{H2}, \ce
-                                                  {H3} et le \ce{H5}.
-? 
-! Undefined control sequence.
-l.280 ...nt où sont le \ce{H2}, \ce{H3} et le \ce
-                                                  {H5}.
-? 
-<bilder/hetcor.png, id=309, 845.559pt x 596.9502pt>
+<bilder/hetcor.png, id=324, 845.559pt x 596.9502pt>
 File: bilder/hetcor.png Graphic file (type png)
  <use bilder/hetcor.png>
-[19 <./bilder/PDSD3.png (PNG copy)> <./bilder/hetcor.png (PNG copy)>]
-(./rapport.aux) )
+[20 <./bilder/inad.png (PNG copy)> <./bilder/PDSD3.png (PNG copy)>]
+(./rapport.bbl) (./rapport.lof [21 <./bilder/hetcor.png (PNG copy)>])
+\tf@lof=\write7
+\openout7 = `rapport.lof'.
+
+ [22]
+(./rapport.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 257 ({)
+### simple group (level 1) entered at line 284 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16098 strings out of 495061
- 254120 string characters out of 1182622
- 362317 words of memory out of 3000000
- 18793 multiletter control sequences out of 15000+50000
- 30474 words of font info for 67 fonts, out of 3000000 for 9000
+ 17245 strings out of 495028
+ 272003 string characters out of 1181228
+ 379936 words of memory out of 3000000
+ 19852 multiletter control sequences out of 15000+50000
+ 115043 words of font info for 137 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 60i,13n,74p,1685b,945s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.60
-0pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </home/
-mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk>{/usr/share/texmf/fo
-nts/enc/dvips/lm/lm-ec.enc} </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecrm1000.600pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600
-pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/m
-ona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10
-.pfb>
-Output written on rapport.pdf (19 pages, 562742 bytes).
+ 60i,13n,79p,1661b,1031s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/sabine/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.
+600pk>{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/f
+onts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-texlive/fonts/type1/public/fourie
+r/fourier-mex.pfb></usr/share/texmf-texlive/fonts/type1/public/fourier/fourier-
+ml.pfb></usr/share/texmf-texlive/fonts/type1/public/fourier/fourier-mlit.pfb></
+usr/share/texmf-texlive/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/a
+dobe/utopia/putb8a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8
+a.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on rapport.pdf (22 pages, 483851 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 418 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 397 words of extra memory for PDF output out of 10000 (max. 10000000)
 
