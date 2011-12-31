@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.5.1)  31 DEC 2011 12:40
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.5.1)  31 DEC 2011 17:48
 entering extended mode
  %&-line parsing enabled.
 **rapport
@@ -755,9 +755,9 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \tab@size=\count124
 \listing@line=\count125
 )
-runsystem(touch /tmp/w18-test-20111231760)...disabled.
+runsystem(touch /tmp/w18-test-201112311068)...disabled.
 
-runsystem(rm -f /tmp/w18-test-20111231760)...disabled.
+runsystem(rm -f /tmp/w18-test-201112311068)...disabled.
 
 
 
@@ -1103,13 +1103,13 @@ Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)            on input line 18.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 28.
+(scrartcl)            on input line 27.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 34.
+(scrartcl)            on input line 33.
 Class scrartcl Info: You've told me to use the font selection of the element
 (scrartcl)           `sectioning' that is an alias of element `disposition'
-(scrartcl)            on input line 40.
+(scrartcl)            on input line 39.
 )
 \tf@toc=\write6
 \openout6 = `rapport.toc'.
@@ -1407,85 +1407,80 @@ l.299 ...voir que le \ce{C5} cristalline et le \ce
 <bilder/inad.png, id=320, 845.559pt x 596.9502pt>
 File: bilder/inad.png Graphic file (type png)
  <use bilder/inad.png>
-[19 <./bilder/PDSD4.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 307.
-
- (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-<bilder/PDSD3.png, id=329, 372.39125pt x 188.705pt>
+[19 <./bilder/PDSD4.png>] <bilder/PDSD3.png, id=329, 372.39125pt x 188.705pt>
 File: bilder/PDSD3.png Graphic file (type png)
- <use bilder/PDSD3.png>
+
+<use bilder/PDSD3.png>
 ! Undefined control sequence.
-l.313 ...ussi fait une mesure avec un couplage \ce
+l.311 ...ussi fait une mesure avec un couplage \ce
                                                   {H-C} en 2 dimensions. Nou...
 
 ? 
 ! Undefined control sequence.
-l.313 ...e le plus grand pic à la position de \ce
+l.311 ...e le plus grand pic à la position de \ce
                                                   {C1} est le \ce{H1} et par...
 
 ? 
 ! Undefined control sequence.
-l.313 ... pic à la position de \ce{C1} est le \ce
+l.311 ... pic à la position de \ce{C1} est le \ce
                                                   {H1} et parce qu’il y a ...
 
 ? 
 ! Undefined control sequence.
-l.313 ...qu’il y a aussi deux grands pics au \ce
+l.311 ...qu’il y a aussi deux grands pics au \ce
                                                   {C6} surface et au \ce{C6}...
 
 ? 
 ! Undefined control sequence.
-l.313 ... grands pics au \ce{C6} surface et au \ce
+l.311 ... grands pics au \ce{C6} surface et au \ce
                                                   {C6} cristalline on peut d...
 
 ? 
 ! Undefined control sequence.
-l.313 ...istalline on peut dire que c’est le \ce
+l.311 ...istalline on peut dire que c’est le \ce
                                                   {H6}. Nous pouvons voir de...
 
 ? 
 ! Undefined control sequence.
-l.313 ...pouvons voir deux différents pics au \ce
+l.311 ...pouvons voir deux différents pics au \ce
                                                   {C4} cristalline et au \ce...
 
 ? 
 ! Undefined control sequence.
-l.313 ...nts pics au \ce{C4} cristalline et au \ce
+l.311 ...nts pics au \ce{C4} cristalline et au \ce
                                                   {C4} surface donc nous pou...
 
 ? 
 ! Undefined control sequence.
-l.313 ...donc nous pouvons dire que c’est le \ce
+l.311 ...donc nous pouvons dire que c’est le \ce
                                                   {H4}, mais au \ce{C2}, au ...
 
 ? 
 ! Undefined control sequence.
-l.313 ... dire que c’est le \ce{H4}, mais au \ce
+l.311 ... dire que c’est le \ce{H4}, mais au \ce
                                                   {C2}, au \ce{C3} et au \ce...
 
 ? 
 ! Undefined control sequence.
-l.313 ...��est le \ce{H4}, mais au \ce{C2}, au \ce
+l.311 ...��est le \ce{H4}, mais au \ce{C2}, au \ce
                                                   {C3} et au \ce{C5}, il y a...
 
 ? 
 ! Undefined control sequence.
-l.313 ...4}, mais au \ce{C2}, au \ce{C3} et au \ce
+l.311 ...4}, mais au \ce{C2}, au \ce{C3} et au \ce
                                                   {C5}, il y a seulement un ...
 
 ? 
 ! Undefined control sequence.
-l.313 ...uvons pas dire exactement où sont le \ce
+l.311 ...uvons pas dire exactement où sont le \ce
                                                   {H2}, \ce{H3} et le \ce{H5}.
 ? 
 ! Undefined control sequence.
-l.313 ... dire exactement où sont le \ce{H2}, \ce
+l.311 ... dire exactement où sont le \ce{H2}, \ce
                                                   {H3} et le \ce{H5}.
 ? 
 ! Undefined control sequence.
-l.313 ...nt où sont le \ce{H2}, \ce{H3} et le \ce
+l.311 ...nt où sont le \ce{H2}, \ce{H3} et le \ce
                                                   {H5}.
 ? 
 <bilder/hetcor.png, id=330, 845.559pt x 596.9502pt>
@@ -1501,41 +1496,37 @@ File: bilder/hetcor.png Graphic file (type png)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 290 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16141 strings out of 495061
- 254726 string characters out of 1182622
- 360294 words of memory out of 3000000
- 18816 multiletter control sequences out of 15000+50000
- 31250 words of font info for 68 fonts, out of 3000000 for 9000
+ 16119 strings out of 495061
+ 254088 string characters out of 1182622
+ 360222 words of memory out of 3000000
+ 18798 multiletter control sequences out of 15000+50000
+ 30937 words of font info for 67 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  60i,13n,79p,1657b,1017s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.60
-0pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </home/
-mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/mona/.texmf-
-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk>{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-ec.enc} </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600
-pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/m
-ona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/mona/.texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on rapport.pdf (22 pages, 589366 bytes).
+ </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.60
+0pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk>{/usr/sh
+are/texmf/fonts/enc/dvips/lm/lm-ec.enc} </home/mona/.texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecrm1000.600pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecrm1200.600pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600
+pk> </home/mona/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmssbx10.pfb>
+Output written on rapport.pdf (22 pages, 579889 bytes).
 PDF statistics:
- 670 PDF objects out of 1000 (max. 8388607)
+ 634 PDF objects out of 1000 (max. 8388607)
  88 named destinations out of 1000 (max. 500000)
  397 words of extra memory for PDF output out of 10000 (max. 10000000)
 
